@@ -177,7 +177,7 @@ When assuming a normal distribution on the response ($y$'s) (or asymptotic theor
 
 $$
 \begin{aligned}
-y \sim N(X\beta,\sigma^2 \cdot I) \\
+&y \sim N(X\beta,\sigma^2 \cdot I) \\
 \hat{\beta} &= My \sim N(MX\beta, \sigma^2 M^TM) \\
 &= N((X^TX)^{-1}X^TX \beta, (X^TX)^{-1}X^T \sigma^2 I ((X^TX)^{-1}X^T)T) \\
 &= N(\beta, \sigma^2 (X^TX)^{-1}) 
@@ -186,11 +186,11 @@ $$
 
 If we assume $\sigma$ is known, then (denoting $A=(X^TX)^{-1}$):
 
-$$ \frac{\hat{\beta}_j-\beta_j}{\sqrt{Var(\hat{\beta}_j)}} = \frac{\hat{\beta}_j-\beta_j}{\sigma\sqrt{A_{jj}}} \sim N(0,1) $$
+$$ \frac{\hat{\beta_j}-\beta_j}{\sqrt{Var(\hat{\beta_j})}} = \frac{\hat{\beta_j}-\beta_j}{ \sigma\sqrt{A_{jj}} } \sim N(0,1) $$
 
-If we use the estimate for $s^2=\hat{\sigma}^2$ and denote the variance of the $j$'th estimate coefficient using this estimation with $Var(\hat{\beta}_j)=s^2A_{jj}$ then:
+If we use the estimate for $s^2=\hat{\sigma}^2$ and denote the variance of the $j$'th estimate coefficient using this estimation with $\hat{\mathbb{V}}(\hat{\beta_j})=s^2 A_{jj}$ then:
 
-$$ \frac{\hat{\beta}_j-\beta_j}{\sqrt{\widehat{Var(\hat{\beta}_j)}}} = \frac{\hat{\beta}_j-\beta_j}{s\sqrt{A_{jj}}} \sim t_{n-p-1} $$
+$$ \frac{\hat{\beta_j}-\beta_j}{\sqrt{\hat{\mathbb{V}}(\hat{\beta_j})}} = \frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}} \sim t_{n-p-1} $$
 
 We can thus develop hypothesis tests and confidence intervals on $\beta$.
 
