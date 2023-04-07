@@ -293,4 +293,28 @@ $$
 TSS = ESS + RSS
 $$
 
-$R^2$ is defined to be $ESS/TSS = 1-RSS/TSS$ – i.e., the proportion of the data-variance that is explained by the model. It is a number between 0 and 1, where 1
+$R^2$ is defined to be $ESS/TSS = 1-RSS/TSS$ – i.e., the proportion of the data-variance that is explained by the model. It is a number between 0 and 1, where 1 means a perfect fit, and 0 means no fit at all. It can also be used to compare models. Since adding variables to the model can only increase the $R^2$, there’s also an “adjusted $R^2$” which penalizes using too many predictors.
+
+We can devise a statistical test under a null hypothesis that all (or some) of the predictor coefficients are actually equal to 0 (i.e., the predictor doesn’t affect the response, and should not be included in the model). This is the F-test (because the statistic we devise follows the F distribution). For checking the null hypothesis that none of the predictors should be in the model, the statistic is:
+
+$$
+F=\frac{ESS}{(p+1)−1}/\frac{RSS}{n−(p+1)} \sim F_{p,n−p−1}
+$$
+
+The denominators in each part are the relevant Degrees of Freedom (DF). The RSS divided by its DF is also called Mean Squared Error (MSE). The test of significance is if the probability of getting the value of the statistic or higher is below some p. value or not.
+
+For checking the null hypothesis that some of the predictors shouldn’t be in the model, we essentially compare “nested” models:
+
+Model A: μ=β0+β1x1Model B: μ=β0+β1x1+β2x2
+
+The statistic here is:
+
+RSSA−RSSBDFA−DFBRSSBDFB∼FDFA−DFB,DFB
+
+It can be used to select a set of predictors that should be included in the model. Though the order in which we test might give different results of significance. There are different automatic procedures that utilizes this F-test to select the predictors. This is called Stepwise Regression.
+
+If we want to compare non-nested models, then the AIC or BIC can be used: these are measures that calculate some function of the RSS + penalization for the number of predictors/covariates in the model.
+
+AIC:nlogRSSn+2⋅(p+1)BIC:nlogRSSn+logn⋅(p+1)
+
+BIC usually penalizes more than AIC, and hence will tend to select models with fewer predictors. In both cases, a lower score is better.
