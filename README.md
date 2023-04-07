@@ -318,6 +318,7 @@ It can be used to select a set of predictors that should be included in the mode
 
 If we want to compare non-nested models, then the AIC or BIC can be used: these are measures that calculate some function of the RSS + penalization for the number of predictors/covariates in the model.
 
-AIC:nlogRSSn+2⋅(p+1)BIC:nlogRSSn+logn⋅(p+1)
+- AIC: $nlog(\frac{RSS}{n})+2⋅(p+1)$
+- BIC: $nlog(\frac{RSS}{n})+log(n)⋅(p+1)$
 
 BIC usually penalizes more than AIC, and hence will tend to select models with fewer predictors. In both cases, a lower score is better.
