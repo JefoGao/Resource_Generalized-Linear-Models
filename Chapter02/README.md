@@ -265,3 +265,9 @@ $$b(\theta)=a(\phi)\cdot\log\int\exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta)))d
 From the property of PDF, we know
 
 $$1=\int f_Y(y)dy=\int\exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta)+c(y,\phi))dy=\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))\exp(-\frac{b(\theta)}{a(\phi)})dy$$
+
+Since the 2nd term doesn't depend on y, we can take it out of the integral:
+
+$$1=\exp(-\frac{b(\theta)}{a(\phi)})\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy$$
+
+So $\exp(-\frac{b(\theta)}{a(\phi)})$ is the normalizing constant of the distribution
