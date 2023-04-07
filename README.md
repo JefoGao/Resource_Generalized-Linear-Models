@@ -95,12 +95,17 @@ $$
 \begin{aligned}
 \nabla_{\beta}(y^{\mathrm{T}}y) &= 0 \\
 \nabla_{\beta}(-2\beta^{\mathrm{T}}X^{\mathrm{T}}y) &= -2X^{\mathrm{T}}y \\
-\nabla_{\beta}(\beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) &= X^{\mathrm{T}}X\beta + X^{\mathrm{T}}X^{\mathrm{T}}\beta = 2X^{\mathrm{T}}X\beta
+\nabla_{\beta}(\beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) &= \nabla_{\beta} (X\beta)^{\mathrm{T}}(X\beta) = 2X^{\mathrm{T}}X\beta
 \end{aligned}
 $$
 
-Equating this to 0 we get that the optimal $\beta$:
+Equating this to 0 we get that the optimal $\hat{\beta}$:
 
-$$X^{\mathrm{T}}X\beta^{\mathrm{}} = X^{\mathrm{T}}y \quad \beta^{\mathrm{}} = (X^{\mathrm{T}}X)^{-1}X^{\mathrm{T}}y$$
+$$
+\begin{aligned}
+X^{\mathrm{T}}X\beta^{\mathrm{}} &= X^{\mathrm{T}}y \\
+\hat{\beta} = (X^{\mathrm{T}}X)^{-1}X^{\mathrm{T}}y
+\end{aligned}
+$$
 
 This last equation is called the “Normal Equations”. We assume here $X^{\mathrm{T}}X$ is invertible, but it’s almost always the case for a design matrix with more rows (observations) than columns (predictors) [also assuming no perfect linear dependence exists between predictors]. This is the solution to “Ordinary Least Squares” (OLS).
