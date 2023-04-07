@@ -170,3 +170,26 @@ $$
 We have used the homoscedasticity assumption for $Var[y] = \sigma^2\cdot I$ where $I$ is the $(n,n)$ identity matrix. We also used the fact that $(A^{-1})^{T} = (A^T)^{-1}$. We usually also replace $\sigma^2$ with its estimation to get an estimate for the variance of the coefficients.
 
 Once we have the variance of the coefficients, we can build confidence intervals on them or conduct hypothesis testing (either using the normal distributional assumption, or asymptotic theory).
+
+## :herb: 0.9 Inference on $\beta$
+
+When assuming a normal distribution on the response ($y$'s) (or asymptotic theory for large enough $n$), we don’t just get the mean and variance of $\hat{\beta}$, but the whole distribution. Remember that $\hat{\beta} = (X^TX)^{-1}X^Ty$, and since $X$ are fixed, the entire $M:=(X^TX)^{-1}X$ matrix can be thought of as fixed matrix. When multiplying a normal distributed vector with a fixed matrix we get that the result is still normally distributed:
+
+$$ y \sim N(X\beta,\sigma^2 I), \quad \hat{\beta} = My \sim N(MX\beta, \sigma^2 M^TM) = N(\beta, \sigma^2 (X^TX)^{-1}) $$
+
+If we assume $\sigma$ is known, then (denoting $A=(X^TX)^{-1}$):
+
+$$ \frac{\hat{\beta}_j-\beta_j}{\sqrt{Var(\hat{\beta}_j)}} = \frac{\hat{\beta}_j-\beta_j}{\sigma\sqrt{A_{jj}}} \sim N(0,1) $$
+
+If we use the estimate for $s^2=\hat{\sigma}^2$ and denote the variance of the $j$'th estimate coefficient using this estimation with $Var(\hat{\beta}_j)=s^2A_{jj}$ then:
+
+$$ \frac{\hat{\beta}_j-\beta_j}{\sqrt{\widehat{Var(\hat{\beta}_j)}}} = \frac{\hat{\beta}_j-\beta_j}{s\sqrt{A_{jj}}} \sim t_{n-p-1} $$
+
+We can thus develop hypothesis tests and confidence intervals on $\beta$.
+
+For confidence intervals we get:
+
+$$ \hat{\beta}_j \pm Z_{\alpha/2} \sqrt{Var(\hat{\beta}_j)} \quad \text{(when } \sigma^2 \text{ is known)} $$
+$$ \hat{\beta}_j \pm t_{\alpha/2,n-p-1} \sqrt{\widehat{Var(\hat{\beta}_j)}} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
+
+where $t_{\alpha/2,n-p-1}$ refers to the $\alpha/2$ quantile of the $t_{n-p-1}$ distribution. 
