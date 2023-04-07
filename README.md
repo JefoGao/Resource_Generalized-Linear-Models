@@ -89,7 +89,7 @@ We can solve this optimization problem by simple matrix calculus: taking the der
 
 $$\nabla_{\beta}(y - X\beta)^{\mathrm{T}}(y - X\beta) = \nabla_{\beta}(y^{\mathrm{T}}y - 2\beta^{\mathrm{T}}X^{\mathrm{T}}y + \beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) = -2X^{\mathrm{T}}y + 2X^{\mathrm{T}}X\beta$$
 
-Here, we have used the fact that $(a^{\mathrm{T}}b)^{\mathrm{T}} = b^{\mathrm{T}}a$ for any vectors $a$ and $b$.
+Here, we have used the fact that $(a^{\mathrm{T}}b)^{\mathrm{T}} = b^{\mathrm{T}}a$ for any vectors $a$ and $b$. Now, to compute the gradient of this scalar function with respect to $\beta$, we can differentiate each term in the expanded expression with respect to $\beta$:
 
 $$
 \begin{aligned}
