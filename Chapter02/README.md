@@ -174,4 +174,4 @@ So we see we can write:
 
 Overall we can get:
 
-$$p(nY=ny)=\exp[n(y\cdot\theta+\ln(1+e^\theta))+\ln\binom{n}{ny}]$$
+$$p(Y=y)=\exp[y\cdot\theta+r\ln(1-e^\theta)+\ln\binom{y+r-1}{y}]$$
