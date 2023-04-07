@@ -175,7 +175,14 @@ Once we have the variance of the coefficients, we can build confidence intervals
 
 When assuming a normal distribution on the response ($y$'s) (or asymptotic theory for large enough $n$), we don’t just get the mean and variance of $\hat{\beta}$, but the whole distribution. Remember that $\hat{\beta} = (X^TX)^{-1}X^Ty$, and since $X$ are fixed, the entire $M:=(X^TX)^{-1}X$ matrix can be thought of as fixed matrix. When multiplying a normal distributed vector with a fixed matrix we get that the result is still normally distributed:
 
-$$ y \sim N(X\beta,\sigma^2 I), \quad \hat{\beta} = My \sim N(MX\beta, \sigma^2 M^TM) = N(\beta, \sigma^2 (X^TX)^{-1}) $$
+$$
+\begin{aligned}
+y \sim N(X\beta,\sigma^2 \cdot I) \\
+\hat{\beta} &= My \sim N(MX\beta, \sigma^2 M^TM) \\
+&= N((X^TX)^{-1}X^TX \beta, (X^TX)^{-1}X^T \sigma^2 I ((X^TX)^{-1}X^T)T) \\
+&= N(\beta, \sigma^2 (X^TX)^{-1}) 
+\end{aligned}
+$$
 
 If we assume $\sigma$ is known, then (denoting $A=(X^TX)^{-1}$):
 
