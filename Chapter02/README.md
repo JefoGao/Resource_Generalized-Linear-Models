@@ -223,8 +223,6 @@ where $h(y,\phi) := \exp(c(y,\phi))$
 - $a(ϕ)$ is a function of a dispersion parameter
 - $h$ is sometimes referred to as the base-measure. 
 
-We saw that many known distributions are actually part of the Expo-Family, including: Normal, Binomial, Poisson, Multinomial and Gamma.
-
-Sometimes you will see different symbols for the different parts of this representation, and also just $ϕ$ instead of $a(ϕ)$ for the dispersion parameter.
+We saw that many known distributions are actually part of the Expo-Family, including: Normal, Binomial, Poisson, Multinomial and Gamma. Sometimes you will see different symbols for the different parts of this representation, and also just $ϕ$ instead of $a(ϕ)$ for the dispersion parameter.
 
 **An important property** not mentioned in the above sections is that for the Expo-Family, the support of the distribution must not depend on the natural parameters. Thus, distributions such as Uniform and Pareto (without known minimum) are not part of the Expo-Family.
