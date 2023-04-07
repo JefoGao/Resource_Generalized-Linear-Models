@@ -36,7 +36,7 @@ Least squares is typically portrayed as an optimization problem where a line is 
   - The move to vector notation allows us to move to higher dimension. Instead of a line we will fit a plane or a hyperplane.
 
 $$
-min \sum^n_{i=1} (y_i-\hat{y_i})^2 = min_{\beta_0, \beta_1} \sum^n_{i=1} (y_i-[\beta_0+\beta_1x_i])^2 = min_{\beta} \sum^n_{i=1} (y_i-\beta^Tx_i])^2
+\min \sum^n_{i=1} (y_i-\hat{y_i})^2 = \min_{\beta_0, \beta_1} \sum^n_{i=1} (y_i-[\beta_0+\beta_1x_i])^2 = \min_{\beta} \sum^n_{i=1} (y_i-\beta^Tx_i])^2
 $$
 
 - By differentiating and equating to zero, we can find the best parameters.
@@ -76,17 +76,18 @@ $$
 
 $$
 \begin{aligned}
-arg max_{\beta} \ell &= arg max_{\beta} - \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] \\
-&= arg min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
+arg \max_{\beta} \ell &= arg \max_{\beta} - \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] \\
+&= arg \min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
 \end{aligned}
 $$
 
   - Maximizing a negative quantity is the same as minimizing the positive quantity
 
 $$
-arg min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = arg min_{\beta}
+arg \min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = arg min_{\beta} \sum_{i=1}^n (y_i - \beta^Tx_i)^2
 $$
 
+  - Again, we see a multiplying constant $\frac{1}{2\sigma^2}$ that doesn't affect the arg min.
 In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
 
 The next video will provide more intuition on maximum likelihood by contrasting the unconstrained model to the constrained model.
