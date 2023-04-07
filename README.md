@@ -143,3 +143,10 @@ This turns out to be a biased estimator, due to the coefficients estimation alre
 $$ s^2=\frac{\text{RSS}}{n-(p+1)} $$ 
 
 By dividing by $n-(p+1)$ instead of $n$, we are accounting for the fact that the estimated coefficients use up $p+1$ degrees of freedom, leaving only $n-(p+1)$ degrees of freedom to estimate $\sigma^2$. The formula also takes into account the fact that the estimator uses information from the data to estimate $\sigma^2$, which can lead to bias if not properly accounted for. The squared-root of it is also called the “Residual Standard Error”.
+
+## :herb: 0.7 Maximum Likelihood
+If we assumed the normal distribution on $y$, we could have also used Maximum Likelihood instead of Least-Squares to find $\beta$ and $\sigma$. As shown in the 2nd intro video, in the case of the normal distribution – both methods are equivalent, and actually compute the same thing: 
+
+The MLE for $\beta$ comes out $=(X^TX)^{-1}X^Ty$
+
+The MLE for $\sigma^2$ comes out $= \frac{RSS}{n}$ (the biased estimator we found).
