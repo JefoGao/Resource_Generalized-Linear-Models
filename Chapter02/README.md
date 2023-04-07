@@ -77,7 +77,7 @@ $$
 
 So we can write:
 - $a(\phi)=\sigma^2$
-- $\theta=\mu
+- $\theta=\mu$
 - $b(\theta)=\frac{\mu^2}{2}=\frac{\theta^2}{2}$
 - $c(\phi,y)=-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma)$
 
