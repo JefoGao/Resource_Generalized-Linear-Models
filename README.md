@@ -150,3 +150,16 @@ If we assumed the normal distribution on $y$, we could have also used Maximum Li
 The MLE for $\beta$ comes out $=(X^TX)^{-1}X^Ty$
 
 The MLE for $\sigma^2$ comes out $= \frac{RSS}{n}$ (the biased estimator we found).
+
+## :herb: 0.8 Variance of Fitted Coefficients
+After fitting the beta coefficients using the data, we can check what is the variability of the coefficients:
+
+$Var[\hat{\beta}] = Var[(X^TX)^{-1}X^Ty]$
+
+Note that $(X^TX)^{-1}X^T$ is considered a known constant matrix multiplied by the random vector y, as such we will take it as the left side multiplication, and it’s inverse as the right side multiplication:
+
+$Var[(X^TX)^{-1}X^Ty] = (X^TX)^{-1}X^T \cdot Var[y] \cdot ((X^TX)^{-1}X^T)^T = (X^TX)^{-1}X^T \cdot \sigma^2 I \cdot X(X^TX)^{-1} = \sigma^2 (X^TX)^{-1}$
+
+We have used the homoscedasticity assumption for $Var[y] = \sigma^2 I$ where I is the $(n,n)$ identity matrix. We also used the fact that $(X^TX)^{-1T} = (X^TX)^{-1}$. We usually also replace $\sigma^2$ with its estimation to get an estimate for the variance of the coefficients.
+
+Once we have the variance of the coefficients, we can build confidence intervals on them or conduct hypothesis testing (either using the normal distributional assumption, or asymptotic theory).
