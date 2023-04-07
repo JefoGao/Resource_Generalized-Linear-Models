@@ -76,7 +76,7 @@ In Linear Models, we use the method of least squares (which is attributed to Gau
 
 $$e_i^2 = (y_i - \mu_i)^2$$
 
-Why squared? If we would try to simply minimize the sum of the (regular, non-squared) errors $\sum_{i=1}^n e_i$ there would be no solution – since we can always put our regression line/plane higher and higher and essentially get $-\infty$. What we really want is that the distance between the points to the line/plane is minimized. Using absolute value $|e_i|$ is more “difficult” mathematically, so we use the squared errors:
+Why squared? If we would try to simply minimize the sum of the (regular, non-squared) errors $\Sigma_{i=1}^n e_i$ there would be no solution – since we can always put our regression line/plane higher and higher and essentially get $-\infty$. What we really want is that the distance between the points to the line/plane is minimized. Using absolute value $|e_i|$ is more “difficult” mathematically, so we use the squared errors:
 
 $$\beta^{\mathrm{T}} = \arg\min_{\beta}\sum_{i=1}^n e_i^2 = \arg\min_{\beta} \sum_{i=1}^n (y_i - \beta^{\mathrm{T}}x_i)^2 = \arg\min_{\beta} (y - X\beta)^{\mathrm{T}}(y - X\beta)$$
 
