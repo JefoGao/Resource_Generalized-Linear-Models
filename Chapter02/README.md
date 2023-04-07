@@ -205,4 +205,4 @@ So we see we can write:
 
 Overall we can get:
 
-$$p(Y=y)=\exp[y\cdot\theta+r\ln(1-e^\theta)+\ln\binom{y+r-1}{y}]$$
+$$p(Y=y)=\exp[\alpha(y\cdot\theta-\ln(-\frac{1}{\theta}))+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]$$
