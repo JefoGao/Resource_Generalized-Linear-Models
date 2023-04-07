@@ -83,7 +83,7 @@ So we can write:
 
 Overall we get:
 
-$$p(Y=y)=\exp(\frac{1}{\sigma^2}(y\cdot\mu-\frac{\mu^2}{2})-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma))$$
+$$p(Y=y)=\exp(\frac{1}{\sigma^2}(y\cdot\theta-\frac{\theta^2}{2})-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma))$$
 
 
 
