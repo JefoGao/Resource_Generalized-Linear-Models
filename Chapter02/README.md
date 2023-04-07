@@ -47,7 +47,7 @@ $$ p(Y=y)=\exp(y\cdot\theta-\ln(1+e^\theta)) $$
 ### :apple: 2.1.3 Exponential distribution
 Exponential distribution $y\sim Exp(\lambda)$
 
-$$ f_Y(y)=\lambda e^{-\lambda y} = \exp(-\lambda y + \ln\lambda)
+$$f_Y(y)=\lambda e^{-\lambda y} = \exp(-\lambda y + \ln\lambda)$$
 
 So we can write:
 - $a(\phi)=1$, no dispersion parameter
@@ -64,13 +64,24 @@ $$
 \begin{aligned}
 \end{aligned}
 $$
-
-
-
+### :apple: 2.1.4 Normal distribution
+Normal distribution $y\sim N(\mu, \sigma^2)$
 $$
 \begin{aligned}
 \end{aligned}
 $$
+
+So we can write:
+- $a(\phi)=1$, no dispersion parameter
+- $\theta=-\lambda$
+  - $\Rightarrow \lambda=-\theta$ 
+- $b(\theta)=-\ln(\lambda)=-\ln(-\theta)$
+- $c(\phi,y)=0$
+
+Overall we get:
+
+$$p(Y=y)=\exp(y\cdot\theta+\ln(-\theta))$$
+
 
 
 
