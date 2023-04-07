@@ -235,22 +235,25 @@ $$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \s
 
 We would like to devise tools to measure how good is our model, and to compare different models.
 
-The basic way to do so is by analysis of variance. We can decompose our observation yi as:
+The basic way to do so is by analysis of variance. We can decompose our observation $y_i$ as:
 
 $$
-y_i = \hat{\mu}_i + (y_i - \hat{\mu}_i) = \hat{\mu}_i + e_i = \text{fit} + \text{residual}
+y_i = \hat{\mu_i} + (y_i - \hat{\mu_i}) = \hat{\mu_i} + e_i = \text{fit} + \text{residual}
 $$
 
 If we “de-mean” the observations (subtract the mean and center them around 0), we would get:
 
 $$
-y_i - \bar{y} = \hat{\mu}_i - \bar{y} + (y_i - \hat{\mu}_i)
+y_i - \bar{y} = \hat{\mu_i} - \bar{y} + (y_i - \hat{\mu_i})
 $$
 
 If we now square each side and sum over all observations we would get:
 
 $$
-\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu}_i - \bar{y} + (y_i - \hat{\mu}_i))^2 = \sum_{i}(\hat{\mu}_i - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2 + 2\sum_{i}(\hat{\mu}_i - \bar{y})(y_i - \hat{\mu}_i)
+\begin{aligned}
+\sum_{i}(y_i - \bar{y})^2 &= \sum_{i}(\hat{\mu_i} - \bar{y} + (y_i - \hat{\mu_i}))^2 \\
+&= \sum_{i}(\hat{\mu_i} - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu_i})^2 + 2\sum_{i}(\hat{\mu_i} - \bar{y})(y_i - \hat{\mu_i})
+\end{aligned}
 $$
 
 Looking at the last term,
