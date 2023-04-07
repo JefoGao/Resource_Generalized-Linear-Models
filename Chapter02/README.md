@@ -207,6 +207,8 @@ Overall we can get:
 
 $$p(Y=y)=\exp[\alpha(y\cdot\theta-\ln(-\frac{1}{\theta}))+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]$$
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 2.3 Important Property and GLM Exponential Family
 
 ### :apple: 2.3.1 Further explanation
