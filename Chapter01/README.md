@@ -141,6 +141,22 @@ For Bernoulli distribution (logistic regression) the most common link function i
 - Taking the log of this will give us values from $-\infty$ to $\infty$
 - $g(\mu_i)=logit(\mu_i)=log(\frac{\mu_i}{1-mu_i})=log(\frac{p_i}{1-p_i})=LP_i=\beta^Tx_i$
 
+Same goes for Poisson and Gamma distribution 
+- For these distributions the mean can only be positive, so we have to use some transformations that give possible values for the means.
+- In these case a log transformation might be plausible
+
+### :apple: 1.4.2 Invertibility
+Link functions must be monotonic and invertible. For th logit, the inverse function is the sigmoid:
+
+$$
+\begin{aligned}
+log(\frac{\mu_i}{1-\mu_i}) &= LP_i\\
+\frac{\mu_i}{1-\mu_i} &= e^{LP_i} \\
+\mu_i &= \frac{e^{LP_i}}{1+e^{LP_i}} = \sigma(LP_i)\\
+\mu_i &= \frac{e^{\beta^Tx_i}}{1+e^{\beta^Tx_i}} = \sigma(\beta^Tx_i)\\
+\end{aligned}
+$$
+
 In summary,
 - The function $g(\mu)$ is needed to transform the structure to a linear structure in cases where the linear structure is inadequate. 
 - The link function is also used for interpretability, ensuring that the values of mu make sense. 
