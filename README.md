@@ -219,8 +219,8 @@ $$
 \begin{aligned}
 \mathbb{V}[\hat{\mu_* }] &= \mathbb{V}[(x_* )^T \hat{\beta}]  \\
 &= \mathbb{V}[(x_* )^T (X^TX)^{-1} X^Ty] \\
-&= (x_* )^T (X^TX)^{-1} X^T \cdot \sigma^2 \cdot I \cdot X (X^TX)^{-1} x_*] \\
-& = (x_*)^T(X^TX)^{-1}x_* \sigma^2
+&= (x_* )^T (X^TX)^{-1} X^T \cdot \sigma^2 \cdot I \cdot X (X^TX)^{-1} x_* ] \\
+&= (x_* )^T(X^TX)^{-1}x_* \sigma^2
 \end{aligned}
 $$
 
