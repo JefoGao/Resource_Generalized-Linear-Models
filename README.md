@@ -196,12 +196,13 @@ Because it can be shown that $\frac{n-p-1}{\sigma^2} s^2 = \frac{RSS}{\sigma^2} 
 
 $$\frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}} = \frac{\frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}}}{ sqrt{ \frac{n-p-1}{\sigma^2}s^2/(n-p-1) } } = \frac{Z}{ sqrt{ \frac{\chi_{n-p-1}^2}{n-p-1} } }\sim t_{n-p-1}$$
 
+Where Z is a standard normal distributied statistic, and $\chi^2_{n-p-1}$ is a chi-square with $n-p-1$ distributed statistic.
 
 We can thus develop hypothesis tests and confidence intervals on $\beta$.
 
 For confidence intervals we get:
 
-$$ \hat{\beta}_j \pm Z_{\alpha/2} \sqrt{Var(\hat{\beta}_j)} \quad \text{(when } \sigma^2 \text{ is known)} $$
-$$ \hat{\beta}_j \pm t_{\alpha/2,n-p-1} \sqrt{\widehat{Var(\hat{\beta}_j)}} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
+$$ \hat{\beta_j} \pm Z_{\alpha/2} \sqrt{Var(\hat{\beta_j})} \quad \text{(when } \sigma^2 \text{ is known)} $$
+$$ \hat{\beta_j} \pm t_{\alpha/2,n-p-1} \sqrt{\hat{Var}(\hat{\beta_j})} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
 
 where $t_{\alpha/2,n-p-1}$ refers to the $\alpha/2$ quantile of the $t_{n-p-1}$ distribution. 
