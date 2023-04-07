@@ -310,7 +310,9 @@ For checking the null hypothesis that some of the predictors shouldn’t be in t
 
 The statistic here is:
 
-RSSA−RSSBDFA−DFBRSSBDFB∼FDFA−DFB,DFB
+$$
+\frac{\frac{RSS_A−RSS_B}{DF_A−DF_B}}{\frac{RSS_B}{DF_B}} \sim F_{DF_A−DF_B,DF_B}
+$$
 
 It can be used to select a set of predictors that should be included in the model. Though the order in which we test might give different results of significance. There are different automatic procedures that utilizes this F-test to select the predictors. This is called Stepwise Regression.
 
