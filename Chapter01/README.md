@@ -1,6 +1,6 @@
 # 1 LINEAR MODELS VS. GENERALIZED LINEAR MODELS
 
-## 1.1 Linear Models
+## :herb: 1.1 Linear Models
 
 3 assumptions:
   1. $y$'s are independent
