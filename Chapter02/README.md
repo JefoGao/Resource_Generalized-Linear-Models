@@ -208,15 +208,15 @@ Overall we can get:
 $$p(Y=y)=\exp[\alpha(y\cdot\theta-\ln(-\frac{1}{\theta}))+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]$$
 
 ## :herb: 2.3 Important Property and GLM Exponential Family
+
+### :apple: 2.3.1 Further explanation
 We introduced the Exponential-Family in the above sections. In our presentation of it, we described it as a distribution of the form:
 
 $$p(y)=\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)+c(y,\phi)])$$
 
 You can also somtime show it as:
 
-$$p(y)=h(y,\phi)\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)])$$
-
-where $h(y,\phi) := \exp(c(y,\phi))$
+$$p(y)=h(y,\phi)\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)]), \quad \text{where } h(y,\phi) := \exp(c(y,\phi))$$
 
 - $θ$ is the “natural” parameter
 - $b(θ)$ is the log-normalizer
@@ -226,3 +226,14 @@ where $h(y,\phi) := \exp(c(y,\phi))$
 We saw that many known distributions are actually part of the Expo-Family, including: Normal, Binomial, Poisson, Multinomial and Gamma. Sometimes you will see different symbols for the different parts of this representation, and also just $ϕ$ instead of $a(ϕ)$ for the dispersion parameter.
 
 **An important property** not mentioned in the above sections is that for the Expo-Family, the support of the distribution must not depend on the natural parameters. Thus, distributions such as Uniform and Pareto (without known minimum) are not part of the Expo-Family.
+
+### :apple: 2.3.2 Exponential Family vs. GLM Exponential Family
+If you have googled Exponential Family, or studied it in other courses, you might encountered other definitions which are similar but not exact. The GLM definition (also known as Exponential Dispersion Models [EDM]) is actually a bit “simplified” in the sense that it’s very “GLM” oriented. So EDM’s (in our case) are a subset of exponential families.
+
+There are a few differences:
+- In GLM’s we make an explicit distinction between the dispersion parameter and the natural (mean-oriented) parameter
+- In GLM’s there’s only $y$, our response variable of interest, not a sufficient statistic of it $t(y)$ and not a vector of it. In general Expo-Families, there might be a vector of sufficient statistics $t(y)$ and a corresponding vector of natural parameters $θ$.
+
+This is important. While there are many families of distribution that belong to the Exponential-Family, only a subset of them belong to EDM’s, and as such not all can be used in the GLM framework (the math just doesn’t turn out right…).
+
+For example, the Beta distribution belongs to the Exponential family, but is not an EDM, so one cannot do Beta regression with the GLM framework. Nevertheless – Beta regression was created separately quite recently, and it’s derivation is somewhat similar to GLM (see [Ferrari and Cribari-Neto, 2004](https://www.ime.usp.br/~sferrari/beta.pdf) and [Cribari-Neto and Zeileis, 2012](https://cran.r-project.org/web/packages/betareg/vignettes/betareg.pdf) for more details.
