@@ -141,4 +141,4 @@ So we see we can write:
 
 Overall we can get:
 
-$$p(nY=ny)=\exp[y\cdot\theta-e^\theta-\ln(y!)]$$
+$$p(Y=y)=\exp[y\cdot\theta-e^\theta-\ln(y!)]$$
