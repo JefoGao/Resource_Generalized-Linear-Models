@@ -261,3 +261,7 @@ Let's look a bit more into the $b(\theta)$ function. The is sort of a normalizin
 Let's see a bit more what it means to be a log-normalizer. Essentially the log-normalizer is the log of the normalizing constant (in our case, times the scaling function), that is
 
 $$b(\theta)=a(\phi)\cdot\log\int\exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta)))dy$$
+
+From the property of PDF, we know
+
+$$1=\int f_Y(y)dy=\int\exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta)+c(y,\phi))dy=\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))\exp(-\frac{b(\theta)}{a(\phi)})dy$$
