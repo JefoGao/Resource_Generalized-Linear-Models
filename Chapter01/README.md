@@ -113,4 +113,4 @@ In the context of GLM, the method of maximum likelihood finds the maximum likeli
 
 One possible question is if there is a distribution that is not normal or asymmetric, where should we put the mean of this distribution? Should we put the mode of the distribution on this point instead of the mean? The way GLM works is that you always put the mean, and we will also see in the upcoming video is that the math works out for the mean.
 
-This gives us more intuition as to what maximum likelihood is doing in the GLM context.
+Predicting the mode would cause greater error on average than predicting the mean, so it makes sense for a given model to predict the mean and not the mode. Still, for the saturated modelwe could get higher likelihood if we positioned the points on the mode and not on the mean. But, if we restrict ourselves to placing them on the means, the saturated model is still the highest likelihood we can hope for comparing to any type of (additional) structural constraints.
