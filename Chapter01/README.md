@@ -97,13 +97,19 @@ BUT - if we assume a different distribution for the $y$ - e.g., Bernoulli, Poiss
 
 ## :herb: 1.3 Saturated vs. Constrained Models
 
-In this section, we gain some more intuition about maximum likelihood by contrasting two possible models: the unconstrained or saturated model and the constraint or regular model. Both models assume the same assumptions as mentioned in a previous video, which are that the observations, after some random response variable, are independent, that they come from some exponential family distribution, and that there is a relation between the means of the distribution and some predictor variable X.
+In this section, we gain some more intuition about maximum likelihood by contrasting two possible models: the Saturated (or unconstrained) model and the Constraint (or regular) model. Both models assume the same assumptions as mentioned in a previous video, which are that the observations, after some random response variable, are independent, that they come from some exponential family distribution, and that there is a relation between the means of the distribution and some predictor variable X.
+
+|Generalized Linear Model|
+|--|
+|1. $y$'s are iid|
+|2. $y \sim Expo.Family$|
+|3. $g(\mu) = x^T\beta$|
 
 The regular model tries to fit some linear line or other model to the points, and it does it by the method of maximum likelihood. Under the assumption that the mean is the maximum likelihood of the normal distribution, we get our betas that maximize the overall likelihood of all those means.
 
 The saturated model, on the other hand, focuses all the means exactly on the points, so this is the maximum likelihood that is ever possible. You can think of it as if we are fitting some high order polynomial axes to the data. 
 
-In the context of GLM, the method of maximum likelihood finds the maximum likelihood that is possible under some constrained model. We try to find a linear line that maximizes these values that are as close as possible to the center to the maximum likelihood of each observation. The difference between the log likelihood of the saturated model and the regular model is a quantity called a unit deviance, which we will talk about in a future video.
+In the context of GLM, the method of maximum likelihood finds the maximum likelihood that is possible under some constrained model. We try to find a linear line that maximizes these values that are as close as possible to the center to the maximum likelihood of each observation. The difference between the log likelihood of the saturated model and the regular model is a quantity called a `unit deviance`, which we will talk about in a future section.
 
 One possible question is if there is a distribution that is not normal or asymmetric, where should we put the mean of this distribution? Should we put the mode of the distribution on this point instead of the mean? The way GLM works is that you always put the mean, and we will also see in the upcoming video is that the math works out for the mean.
 
