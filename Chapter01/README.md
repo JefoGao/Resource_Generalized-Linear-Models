@@ -19,7 +19,7 @@ In regular linear model, method for finding coefficients is ordinary least squea
 
 In generalized linear model, you can only use maximum likelihood. Ordinary least squares and maximum likelihood can be seen as a special case of the more general generalized linear model or GLM.
 
-|LM|GLM|
+|Linear Model|Generalized Linear Model|
 |--|--|
 |1. iid|1. iid|
 |2. $y\sim N(\mu, \sigma^2)$|2. $y\sim Expo. Family$|
