@@ -125,6 +125,16 @@ In the Linear model, we assume an identity relation: $\mu_i=\beta^Tx_i$
 In GLM's, we assume some function relation: $g(\mu_i)=\beta^Tx_i$
 
 ### :apple: 1.4.1 Why use link functions?
+There are a few reasons:
+- To preserve the linearity structure
+  - If our data seems like a straight line, maybe we don't need any transformation
+  - But if our data doesn't look like a line, maybe we need some transformation
+- Another reason is interpretability
+  - Linear relations are unconstrained: $\beta^Tx_i$ can take any values from $-\infty$ to $\infty$
+    - Evan if we take a very small slope
+  - But if $y\sim Ber(p)$, the mean, $p$ ($\mu=\mathbb{E}[y]=p$) can only take values between 0 and 1.
+
+So one of the main reason to use link function is to make sure that the values you get for $\mu$ makes sense.
 
 - The function $g(\mu)$ is needed to transform the structure to a linear structure in cases where the linear structure is inadequate. 
 - The link function is also used for interpretability, ensuring that the values of mu make sense. 
