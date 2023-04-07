@@ -308,5 +308,8 @@ $$
 \begin{aligned}
 b''(\theta) &= \int y\cdot\frac{d}{d\theta}\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))dy \\
 &= \int y\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))(\frac{y-b'(\theta)}{a(\phi)})dy \\
+&= \frac{1}{a(\phi)}[\int y^2\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))-b'(\theta)\int y\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))] \\
+&= \frac{1}{a(\phi)}[\int y^2 f_Y(y)dy - \mu\int y f_Y(y)dy] \\
+&= \frac{1}{a(\phi)}[\mathbb{E}[y^2]-\mathbb{E}[y]^2] = \frac{\mathbb{V}[y]}{a(\phi)}
 \end{aligned}
 $$
