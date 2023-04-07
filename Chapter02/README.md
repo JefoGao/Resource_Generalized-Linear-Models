@@ -104,6 +104,15 @@ $$y^*=n\cdot y\sim Bin(n,p)$$
 
 $$
 \begin{aligned}
-
+p(nY=ny) &= \binom{n}{ny}p^{ny}(1-p)^{n-ny}\\
+&= \exp[ny\ln p + (n-ny)\ln(1-p)+\ln\binom{n}{ny}]\\
+&= \exp[n(y\cdot\ln(\frac{p}{1-p})+\ln(1-p))+\ln\binom{n}{ny}]
 \end{aligned}
 $$
+
+So we see we can write:
+- $a(\phi)=\frac{1}{n}$
+- $\theta=\ln(\frac{p}{1-p})$
+  - $\Rightarrow p=\sigma(\theta)=\frac{e^\theta}{1+e^\theta}$ 
+- $b(\theta)=\ln(\frac{1}{1-p})=\ln(1+e^\theta)$
+- $c(\phi,y)=\ln\binom{n}{ny}$
