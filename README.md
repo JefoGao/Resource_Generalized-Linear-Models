@@ -305,7 +305,8 @@ The denominators in each part are the relevant Degrees of Freedom (DF). The RSS 
 
 For checking the null hypothesis that some of the predictors shouldn’t be in the model, we essentially compare “nested” models:
 
-Model A: μ=β0+β1x1Model B: μ=β0+β1x1+β2x2
+- Model A: $\mu=β_0+β_1x_1$
+- Model B: $μ=β_0+β_1x_1+β_2x_2$
 
 The statistic here is:
 
