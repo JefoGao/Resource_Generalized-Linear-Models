@@ -265,19 +265,32 @@ $$
 The 2nd term is the sum of the residuals which is equal to 0. The 1st term is also equal to 0, which is easier to see in matrix notation:
 
 $$
-\sum_{i}\hat{\mu}_i(y_i - \hat{\mu}_i) = (X\beta)^T(y - X\beta) = \beta^TX^T(y - X\beta) = \beta^T[X^T(y - X(X^TX)^{-1}X^Ty)] = X^T(y - X(X^TX)^{-1}X^Ty) = X^Ty - X^Ty = 0
+\begin{aligned}
+\sum_{i}\hat{\mu_i}(y_i - \hat{\mu_i}) &= (X\hat{\beta})^T(y - X\hat{\beta}) \\
+&= \hat{\beta}^TX^T(y - X\hat{\beta}) \\
+&= \hat{\beta}^T[X^T(y - X(X^TX)^{-1}X^Ty)] 
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+X^T(y - X(X^TX)^{-1}X^Ty) &= X^Ty-X^TX(X^TX)^{-1}X^Ty \\
+&=X^Ty - X^Ty = 0
+\end{aligned}
 $$
 
 We get,
 
 $$
-\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu_i} - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2
+\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu_i} - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu_i})^2
 $$
 
-The left-hand-side (LHS) is called the Total Sum of Squares (TSS) – it is the variance of the y’s (multiplied by n). The 1st term on the right-hand-side (RHS) is called the Explained Sum of Squares, or the Regression Sum of Squares (ESS) – it is the part of the total variance explained by the regression model. The 2nd term on the RHS is the familiar RSS – it is the part of the total variance not explained by the regression model. So we got that,
+The left-hand-side (LHS) is called the Total Sum of Squares (TSS) – it is the variance of the $y$’s (multiplied by $n$). The 1st term on the right-hand-side (RHS) is called the Explained Sum of Squares, or the Regression Sum of Squares (ESS) – it is the part of the total variance explained by the regression model. The 2nd term on the RHS is the familiar RSS – it is the part of the total variance not explained by the regression model. So we got that,
 
 $$
 TSS = ESS + RSS
 $$
 
-R2 is defined to be $ESS/TSS = 1-RSS/TSS$ – i.e., the proportion of the data-variance that is explained by the model. It is a number between 0 and 1, where 1
+$R^2$ is defined to be $ESS/TSS = 1-RSS/TSS$ – i.e., the proportion of the data-variance that is explained by the model. It is a number between 0 and 1, where 1
