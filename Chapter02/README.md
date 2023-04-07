@@ -206,3 +206,25 @@ So we see we can write:
 Overall we can get:
 
 $$p(Y=y)=\exp[\alpha(y\cdot\theta-\ln(-\frac{1}{\theta}))+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]$$
+
+## :herb: 2.3 Important Property and GLM Exponential Family
+We introduced the Exponential-Family in the above sections. In our presentation of it, we described it as a distribution of the form:
+
+$$p(y)=\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)+c(y,\phi)])$$
+
+You can also somtime show it as:
+
+$$p(y)=h(y,\phi)\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)])$$
+
+where $h(y,\phi) := \exp(c(y,\phi))$
+
+- $θ$ is the “natural” parameter
+- $b(θ)$ is the log-normalizer
+- $a(ϕ)$ is a function of a dispersion parameter
+- $h$ is sometimes referred to as the base-measure. 
+
+We saw that many known distributions are actually part of the Expo-Family, including: Normal, Binomial, Poisson, Multinomial and Gamma.
+
+Sometimes you will see different symbols for the different parts of this representation, and also just $ϕ$ instead of $a(ϕ)$ for the dispersion parameter.
+
+**An important property** not mentioned in the above sections is that for the Expo-Family, the support of the distribution must not depend on the natural parameters. Thus, distributions such as Uniform and Pareto (without known minimum) are not part of the Expo-Family.
