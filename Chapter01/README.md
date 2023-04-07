@@ -5,7 +5,7 @@
 3 assumptions:
   1. $y$'s are independent
   2. Each observation comes from a normal distribution: $y_i \sim (\mu, \sigma^2)$
-  3. Means $\mu_i$ are related to predictor variables $x_i$ by a linear model: $\mu_i = x_i^T \beta$
+  3. Means $\mu_i$ are related to predictor variables $x_i$ by a linear model: $\mu_i = x_i^T \beta = \beta_0+\beta_1x_1 + \beta_2x_2 \cdots$
 
 Coefficients are linear
 Predictor variables can be transformed, but coefficients must be linear
