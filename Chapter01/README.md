@@ -1,7 +1,7 @@
-# 1 LINEAR MODELS VS. GENERALIZED LINEAR MODELS
+# 1 Introduction to Generalized Linear Models
 
-## :herb: 1.1 Linear Models
-
+## :herb: 1.1 Linear Models vs. Generalized Linear Models
+### :apple: 1.1.1 Linear Models
 3 assumptions:
   1. $y$'s are independent
   2. Each observation comes from a normal distribution: $y_i \sim (\mu, \sigma^2)$
@@ -10,7 +10,7 @@
 - Coefficients are linear
 - Predictor variables can be transformed, but coefficients must be linear
 
-## 1.2 Generalized Linear Models:
+### :apple: 1.1.2 Generalized Linear Models:
 Takes linear models and generalizes it by:
   1. Allowing $y$'s to come from any exponential family distribution
   2. Allowing means $\mu$ to be related to predictor variables $x_i$ by some function of $\mu$: $g(\mu_i) = x_i^T \beta$
@@ -25,3 +25,25 @@ In generalized linear model, you can only use maximum likelihood. Ordinary least
 |2. $y\sim N(\mu, \sigma^2)$|2. $y\sim Expo. Family$|
 |3. $\mu = x^T \beta$|3. $g(\mu) = x^T \beta$|
 |4. OLS or MLE|4. MLE|
+
+## :herb: 1.2 Least Squares vs. Maximum Likelihood
+
+### :apple: 1.2.1 Least Squares
+Least squares is typically portrayed as an optimization problem where a line is fit to lots of points in two or more dimensions. The best line is one where the squared distance between the points and the line is minimized. The problem can be generalized to multiple predictor variables where the goal is to find some linear combination that is as close as possible to the Y values. This problem is solved by differentiating and equating to zero.
+
+- In Least-Squares one tries to minimize the square distance between the observed points and the points predicted by the model (e.g. $\hat{y} = \beta_0+\beta_1x$)
+- The minimization is done with regards to (w.r.t. = with reference to) the parameters of the model, i.e. to the $\beta$'s: $\beta_0,\beta_1$ (in 2d example) - which can also be written in vector form simply as $\beta$.
+  - The move to vector notation allows us to move to higher dimension. Instead of a line we will fit a plane or a hyperplane.
+
+$$
+min \sum^n_{i=1} (y_i-\hat{y_i})^2 = min_{\beta_0, \beta_1} \sum^n_{i=1} (y_i-[\beta_0+\beta_1x_i])^2 = min_{\beta} \sum^n_{i=1} (y_i-\beta^Tx_i])^2
+$$
+
+- By differentiating and equating to zero, we can find the best parameters.
+  - In the linear case (linear in the parameters, that is linear in $\beta$'s: $\beta^Tx$), we can find a closed form solution.
+### :apple: 1.2.2 Maximum Likelihood
+Maximum likelihood assumes a distribution on the Y values. In the case of a normal distribution, the mean is assumed to be at the center of the distribution with some standard deviation. The goal is to choose beta coefficients that maximize the likelihood function, which is the product of the probability density function of the normal distribution for each observation. This function is maximized by differentiating the log of the likelihood function and equating to zero.
+
+In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
+
+The next video will provide more intuition on maximum likelihood by contrasting the unconstrained model to the constrained model.
