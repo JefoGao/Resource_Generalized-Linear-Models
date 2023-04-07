@@ -1,5 +1,7 @@
 # 1 Introduction to Generalized Linear Models
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 1.1 Linear Models vs. Generalized Linear Models
 ### :apple: 1.1.1 Linear Models
 3 assumptions:
@@ -25,6 +27,8 @@ In generalized linear model, you can only use maximum likelihood. Ordinary least
 |2. $y\sim N(\mu, \sigma^2)$|2. $y\sim Expo. Family$|
 |3. $\mu = x^T \beta$|3. $g(\mu) = x^T \beta$|
 |4. OLS or MLE|4. MLE|
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 1.2 Least Squares vs. Maximum Likelihood
 
@@ -95,6 +99,8 @@ We see that for the normal distribution, the least squares and the maximum likel
 
 BUT - if we assume a different distribution for the $y$ - e.g., Bernoulli, Poisson, etc., the methods won't be equivalent - and we will only use Maximum Likelihood. 
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 1.3 Saturated vs. Constrained Models
 
 In this section, we gain some more intuition about maximum likelihood by contrasting two possible models: the Saturated (or unconstrained) model and the Constraint (or regular) model. Both models assume the same assumptions as mentioned in a previous video, which are that the observations, after some random response variable, are independent, that they come from some exponential family distribution, and that there is a relation between the means of the distribution and some predictor variable X.
@@ -114,6 +120,8 @@ In the context of GLM, the method of maximum likelihood finds the maximum likeli
 One possible question is if there is a distribution that is not normal or asymmetric, where should we put the mean of this distribution? Should we put the mode of the distribution on this point instead of the mean? The way GLM works is that you always put the mean, and we will also see in the upcoming video is that the math works out for the mean.
 
 Of note is that predicting the mode would cause greater error on average than predicting the mean, so it makes sense for a given model to predict the mean and not the mode. Still, for the saturated modelwe could get higher likelihood if we positioned the points on the mode and not on the mean. But, if we restrict ourselves to placing them on the means, the saturated model is still the highest likelihood we can hope for comparing to any type of (additional) structural constraints.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 1.4 Link Functions
 One of the generalizations that GLM actually generalizes, is the relation between the mean and the linear predictor.
