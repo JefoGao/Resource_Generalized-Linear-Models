@@ -103,7 +103,7 @@ Equating this to 0 we get that the optimal $\hat{\beta}$:
 
 $$
 \begin{aligned}
-X^{\mathrm{T}}X\hat{\beta} &= X^{\mathrm{T}}y \\
+X^{\mathrm{T}}X \hat{\beta} &= X^{\mathrm{T}}y \\
 \hat{\beta} &= (X^{\mathrm{T}}X)^{-1}X^{\mathrm{T}}y
 \end{aligned}
 $$
