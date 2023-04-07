@@ -62,6 +62,11 @@ Linear models assume that:
 A common assumption is that $\epsilon_i \sim N(0, \sigma^2)$. This is sometimes referred to as "Normal Linear Models", but it is sometimes used also to describe Linear Models. Another fundamental assumption is homoscedasticity, that is, the variance doesn’t change as a function of the mean.
 
 So there are a few major assumptions to conduct a LM analysis:
-- $y$ is IID.
-- Homoscedasticity: $\operatorname{Var}[y_i] = \sigma^2$.
-- The relationship between $y$ and $x$ is linear: $\mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_dx_{ip}$.
+1. $y$ is IID.
+2. Homoscedasticity: $\operatorname{Var}[y_i] = \sigma^2$.
+3. The relationship between $y$ and $x$ is linear: $\mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_dx_{ip}$.
+
+For assumption 2 to be stronger: not only constant variance, but also the shape of the distribution is Normal
+
+$$ y_i \sim N(\mathbb{E}[y_i],\mathbb{V}[y_i])=N(\mu_i, \sigma^2) $$
+
