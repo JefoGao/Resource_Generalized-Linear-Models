@@ -175,3 +175,34 @@ So we see we can write:
 Overall we can get:
 
 $$p(Y=y)=\exp[y\cdot\theta+r\ln(1-e^\theta)+\ln\binom{y+r-1}{y}]$$
+
+### :apple: 2.2.5 Gamma
+Gamma distribution $y\sim Gamma(\alpha,\beta)$
+
+$$f_Y(y)=\frac{1}{\Gamma(\alpha)}\beta^\alpha y^{\alpha-1} e^{-\beta y}$$
+
+Let's to write this in terms of the mean so we better understand the relations between the mean and the natural parameter (we could have left it as is, but is not the mean):
+
+$$\mu=\mathbb{E}[y]=\frac{\alpha}{\beta} \Rightarrow \beta=\frac{\alpha}{\mu}$$
+
+So we have,
+
+$$
+\begin{aligned}
+p(Y=y) &= \frac{1}{\Gamma(\alpha)}\beta^\alpha y^{\alpha-1} e^{-\beta y}\\
+&= \frac{1}{\Gamma(\alpha)}(\frac{\alpha}{\mu})^\alpha y^{\alpha-1} e^{-\frac{\alpha}{\mu} y}\\
+&= \exp[-\frac{\alpha}{\mu}y-\alpha\cdot\ln\mu+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]\\
+&= \exp[\alpha(-\frac{1}{\mu}y-\ln\mu)+(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)]
+\end{aligned}
+$$
+
+So we see we can write:
+- $a(\phi)=\frac{1}{\alpha}$
+- $\theta=-\frac{1}{\mu}$
+  - $\Rightarrow \mu=-\frac{1}{\theta}$ 
+- $b(\theta)=\ln(-\frac{1}{\theta})$
+- $c(\phi,y)=(\alpha-1)\ln y + \alpha\ln\alpha-\ln\Gamma(\alpha)$
+
+Overall we can get:
+
+$$p(Y=y)=\exp[y\cdot\theta+r\ln(1-e^\theta)+\ln\binom{y+r-1}{y}]$$
