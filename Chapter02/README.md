@@ -40,6 +40,26 @@ So we can write:
 - $b(\theta)=\ln(\frac{1}{1-p})=\ln(1+e^\theta)$
 - $c(\phi,y)=0$
 
+Overall we get:
+
+$$ p(Y=y)=\exp(y\cdot\theta-\ln(1+e^\theta)) $$
+
+### :apple: 2.1.3 Exponential distribution
+Exponential distribution $y\sim Exp(\lambda)$
+
+$$ f_Y(y)=\lambda e^{-\lambda y} = \exp(-\lambda y + \ln\lambda)
+
+So we can write:
+- $a(\phi)=1$, no dispersion parameter
+- $\theta=-\lambda$
+  - $\Rightarrow \lambda=-\theta$ 
+- $b(\theta)=-\ln(\lambda)=-\ln(-\theta)$
+- $c(\phi,y)=0$
+
+Overall we get:
+
+$$p(Y=y)=\exp(y\cdot\theta+\ln(-\theta))$$
+
 $$
 \begin{aligned}
 \end{aligned}
