@@ -114,3 +114,11 @@ In the context of GLM, the method of maximum likelihood finds the maximum likeli
 One possible question is if there is a distribution that is not normal or asymmetric, where should we put the mean of this distribution? Should we put the mode of the distribution on this point instead of the mean? The way GLM works is that you always put the mean, and we will also see in the upcoming video is that the math works out for the mean.
 
 Of note is that predicting the mode would cause greater error on average than predicting the mean, so it makes sense for a given model to predict the mean and not the mode. Still, for the saturated modelwe could get higher likelihood if we positioned the points on the mode and not on the mean. But, if we restrict ourselves to placing them on the means, the saturated model is still the highest likelihood we can hope for comparing to any type of (additional) structural constraints.
+
+## :herb: 1.4 Link Functions
+- Generalized linear models generalize the relations between predictor variables to the mean of a distribution.
+- The function G(mu) is needed to transform the structure to a linear structure in cases where the linear structure is inadequate. 
+- The link function is also used for interpretability, ensuring that the values of mu make sense. 
+- The link function must be monotonic, invertible, and differentiable. 
+- The canonical link function relates the natural parameter to the linear predictor.
+- The link function is not transforming the predictor or the response but only the mu. 
