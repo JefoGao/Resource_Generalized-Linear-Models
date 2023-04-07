@@ -136,8 +136,14 @@ There are a few reasons:
 
 So one of the main reason to use link function is to make sure that the values you get for $\mu$ makes sense.
 
+For Bernoulli distribution (logistic regression) the most common link function is the `logit`:
+- Dividing $p$ by $(1-p)$ will give us values from 0 to $\infty$
+- Taking the log of this will give us values from $-\infty$ to $\infty$
+- $g(\mu_i)=logit(\mu_i)=log(\frac{\mu_i}{1-mu_i})=log(\frac{p_i}{1-p_i})=LP_i=\beta^Tx_i$
+
+In summary,
 - The function $g(\mu)$ is needed to transform the structure to a linear structure in cases where the linear structure is inadequate. 
 - The link function is also used for interpretability, ensuring that the values of mu make sense. 
 - The link function must be monotonic, invertible, and differentiable. 
 - The canonical link function relates the natural parameter to the linear predictor.
-- The link function is not transforming the predictor or the response but only the mu. 
+- The link function is not transforming the predictor or the response but only the $\mu$. 
