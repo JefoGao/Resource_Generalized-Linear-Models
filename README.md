@@ -70,3 +70,24 @@ For assumption 2 to be stronger: not only constant variance, but also the shape 
 
 $$ y_i \sim N(\mathbb{E}[y_i],\mathbb{V}[y_i])=N(\mu_i, \sigma^2) $$
 
+## :herb: 0.4 Finding the Coefficients – Least Squares
+
+In Linear Models, we use the method of least squares (which is attributed to Gauss from late 18th / early 19th century): we are trying to minimize the squared “errors” between the $y$'s (actual/observed response) and the $\mu$'s (predicted response by our model):
+
+$$e_i^2 = (y_i - \mu_i)^2$$
+
+Why squared? If we would try to simply minimize the sum of the (regular, non-squared) errors $\sum_{i=1}^n e_i$ there would be no solution – since we can always put our regression line/plane higher and higher and essentially get $-\infty$. What we really want is that the distance between the points to the line/plane is minimized. Using absolute value $|e_i|$ is more “difficult” mathematically, so we use the squared errors:
+
+$$\beta^{\mathrm{T}} = \arg\min_{\beta}\sum_{i=1}^n e_i^2 = \arg\min_{\beta} \sum_{i=1}^n (y_i - \beta^{\mathrm{T}}x_i)^2 = \arg\min_{\beta} (y - X\beta)^{\mathrm{T}}(y - X\beta)$$
+
+Here $X$ is the $(n,p+1)$ “design matrix” whose 1st column is made of 1’s, $y$ is an $(n,1)$ vector, and $\beta$ is a $(p+1,1)$ vector. For notation simplicity, I will drop the underline from the vectors, and count on the learner to understand from context.
+
+We can solve this optimization problem by simple matrix calculus: taking the derivative w.r.t. $\beta$ and equating it to 0:
+
+$$\nabla_{\beta}(y - X\beta)^{\mathrm{T}}(y - X\beta) = \nabla_{\beta}(y^{\mathrm{T}}y - 2\beta^{\mathrm{T}}X^{\mathrm{T}}y + \beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) = -2X^{\mathrm{T}}y + 2X^{\mathrm{T}}X\beta$$
+
+Equating this to 0 we get that the optimal $\beta$:
+
+$$X^{\mathrm{T}}X\beta^{\mathrm{}} = X^{\mathrm{T}}y \quad \beta^{\mathrm{}} = (X^{\mathrm{T}}X)^{-1}X^{\mathrm{T}}y$$
+
+This last equation is called the “Normal Equations”. We assume here $X^{\mathrm{T}}X$ is invertible, but it’s almost always the case for a design matrix with more rows (observations) than columns (predictors) [also assuming no perfect linear dependence exists between predictors]. This is the solution to “Ordinary Least Squares” (OLS).
