@@ -121,4 +121,24 @@ Overall we can get:
 
 $$p(nY=ny)=\exp[n(y\cdot\theta+\ln(1+e^\theta))+\ln\binom{n}{ny}]$$
 
-### :apple: 2.2.3 
+### :apple: 2.2.3 Poisson
+
+Possion distribution $y\sim Poisson(\lambda)$
+
+$$
+\begin{aligned}
+p(Y=y) &= \frac{e^{-\lambda}\lambda^y}{y!}\\
+&= \exp[y\cdot\ln\lambda-\lambda-\ln(y!)]
+\end{aligned}
+$$
+
+So we see we can write:
+- $a(\phi)=1$
+- $\theta=\ln\lambda$
+  - $\Rightarrow \lambda=e^\theta$ 
+- $b(\theta)=e^\theta$
+- $c(\phi,y)=-\ln(y!)$
+
+Overall we can get:
+
+$$p(nY=ny)=\exp[y\cdot\theta-e^\theta-\ln(y!)]$$
