@@ -162,7 +162,7 @@ $$
 \begin{aligned}
 Var[(X^TX)^{-1}X^Ty] &= (X^TX)^{-1}X^T \cdot Var[y] \cdot ((X^TX)^{-1}X^T)^T \\
 &= (X^TX)^{-1}X^T \cdot \sigma^2 I \cdot X(X^TX)^{-1} \\
-$= \sigma^2 (X^TX)^{-1} (X^TX (X^TX)^{-1})
+$= \sigma^2 (X^TX)^{-1} (X^TX (X^TX)^{-1}) \\
 &= \sigma^2 (X^TX)^{-1}
 \end{aligned}
 $$
