@@ -76,15 +76,14 @@ f_Y(y) &= \frac{1}{\sqrt{2\pi}\sigma} \exp(-\frac{1}{2\sigma^2}(y-\mu)^2)\\
 $$
 
 So we can write:
-- $a(\phi)=1$, no dispersion parameter
-- $\theta=-\lambda$
-  - $\Rightarrow \lambda=-\theta$ 
-- $b(\theta)=-\ln(\lambda)=-\ln(-\theta)$
-- $c(\phi,y)=0$
+- $a(\phi)=\sigma^2$
+- $\theta=\mu
+- $b(\theta)=\frac{\mu^2}{2}=\frac{\theta^2}{2}$
+- $c(\phi,y)=-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma)$
 
 Overall we get:
 
-$$p(Y=y)=\exp(y\cdot\theta+\ln(-\theta))$$
+$$p(Y=y)=\exp(\frac{1}{\sigma^2}(y\cdot\mu-\frac{\mu^2}{2})-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma))$$
 
 
 
