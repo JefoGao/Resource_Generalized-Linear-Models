@@ -80,11 +80,24 @@ Why squared? If we would try to simply minimize the sum of the (regular, non-squ
 
 $$\beta^{\mathrm{T}} = \arg\min_{\beta}\sum_{i=1}^n e_i^2 = \arg\min_{\beta} \sum_{i=1}^n (y_i - \beta^{\mathrm{T}}x_i)^2 = \arg\min_{\beta} (y - X\beta)^{\mathrm{T}}(y - X\beta)$$
 
-Here $X$ is the $(n,p+1)$ “design matrix” whose 1st column is made of 1’s, $y$ is an $(n,1)$ vector, and $\beta$ is a $(p+1,1)$ vector. For notation simplicity, I will drop the underline from the vectors, and count on the learner to understand from context.
+- Here $X$ is the $(n,p+1)$ “design matrix” whose 1st column is made of 1’s
+- $y$ is an $(n,1)$ vector
+- $\beta$ is a $(p+1,1)$ vector. 
+- For notation simplicity, I will drop the underline from the vectors, and count on the learner to understand from context.
 
 We can solve this optimization problem by simple matrix calculus: taking the derivative w.r.t. $\beta$ and equating it to 0:
 
 $$\nabla_{\beta}(y - X\beta)^{\mathrm{T}}(y - X\beta) = \nabla_{\beta}(y^{\mathrm{T}}y - 2\beta^{\mathrm{T}}X^{\mathrm{T}}y + \beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) = -2X^{\mathrm{T}}y + 2X^{\mathrm{T}}X\beta$$
+
+Here, we have used the fact that $(a^{\mathrm{T}}b)^{\mathrm{T}} = b^{\mathrm{T}}a$ for any vectors $a$ and $b$.
+
+$$
+\begin{aligned}
+\nabla_{\beta}(y^{\mathrm{T}}y) &= 0 \\
+\nabla_{\beta}(-2\beta^{\mathrm{T}}X^{\mathrm{T}}y) &= -2X^{\mathrm{T}}y \\
+\nabla_{\beta}(\beta^{\mathrm{T}}X^{\mathrm{T}}X\beta) &= X^{\mathrm{T}}X\beta + X^{\mathrm{T}}X^{\mathrm{T}}\beta = 2X^{\mathrm{T}}X\beta
+\end{aligned}
+$$
 
 Equating this to 0 we get that the optimal $\beta$:
 
