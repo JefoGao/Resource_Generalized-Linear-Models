@@ -126,17 +126,20 @@ $$\hat{\beta} = (X^T W X)^{-1}X^T W y$$
 
 ## :herb: 0.6 Estimating $σ^2$
 
-Let’s define the sum of squared errors using the optimal parameters $\betâ$ 
-as RSS – Residual Sum of Squares:
+Let’s define the sum of squared errors using the optimal parameters $\hat{\beta}$ as RSS – Residual Sum of Squares:
 
 $$
-\text{RSS}=\sum_{i=1}^n(y_i-\betâ ^Tx_i)^2=\sum_{i=1}^n(y_i-\hat{\mu_i})^2
+\text{RSS}=\sum_{i=1}^n(y_i-\hat{\beta}^T x_i)^2=\sum_{i=1}^n(y_i-\hat{\mu_i})^2
 $$
 
-where $\hat{\mu_i}$ is defined to be $\betâ ^Tx_i$. We are trying to estimate $V[y_i]$ which by definition of Variance is $=E[(y_i-μ_i)^2]$, and so it makes sense to estimate it using the data, replacing the theoretical mean with the sample average (“Monte-Carlo estimation”):
+where $\hat{\mu_i}$ is defined to be $\hat{\beta}^T x_i$. We are trying to estimate $\mathbb{V}[y_i]$ which by definition of Variance is $=\mathbb{E}[(y_i-μ_i)^2]$, and so it makes sense to estimate it using the data, replacing the theoretical mean with the sample average (“Monte-Carlo estimation”):
 
 $$
-V[y_i]=E[(y_i-μ_i)^2] \approx \frac{1}{n} \sum_{i=1}^n (y_i-\hat{\mu_i})^2 = \frac{\text{RSS}}{n}
+\mathbb{V}[y_i]=\mathbb{E}[(y_i-μ_i)^2] \approx \frac{1}{n} \sum_{i=1}^n (y_i-\hat{\mu_i})^2 = \frac{\text{RSS}}{n}
 $$
 
-This turns out to be a biased estimator, due to the coefficients estimation already preformed for the $\beta$’s (who are hidden in the $\mu$’s). Instead we will usually use the unbiased estimator: $s^2=\frac{\text{RSS}}{n-(p+1)}$. The squared-root of it is also called the “Residual Standard Error”.
+This turns out to be a biased estimator, due to the coefficients estimation already preformed for the $\beta$’s (who are hidden in the $\mu$’s). Instead we will usually use the unbiased estimator: 
+
+$$ s^2=\frac{\text{RSS}}{n-(p+1)} $$ 
+
+By dividing by $n-(p+1)$ instead of $n$, we are accounting for the fact that the estimated coefficients use up $p+1$ degrees of freedom, leaving only $n-(p+1)$ degrees of freedom to estimate $\sigma^2$. The formula also takes into account the fact that the estimator uses information from the data to estimate $\sigma^2$, which can lead to bias if not properly accounted for. The squared-root of it is also called the “Residual Standard Error”.
