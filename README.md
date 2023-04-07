@@ -206,3 +206,26 @@ $$ \hat{\beta_j} \pm Z_{\alpha/2} \sqrt{Var(\hat{\beta_j})} \quad \text{(when } 
 $$ \hat{\beta_j} \pm t_{\alpha/2,n-p-1} \sqrt{\hat{Var}(\hat{\beta_j})} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
 
 where $t_{\alpha/2,n-p-1}$ refers to the $\alpha/2$ quantile of the $t_{n-p-1}$ distribution. 
+
+## :herb: 0.10 Uncertainty of Prediction
+
+We can also get the uncertainty over a prediction. Suppose we have a new observation $x_* $, then the regression line prediction is:
+
+$$\hat{\mu_* } = (x_* )^T \hat{\beta}$$
+
+And the variance for that prediction is:
+
+$$
+\begin{aligned}
+\mathbb{V}[\hat{\mu_* }] &= \mathbb{V}[(x_* )^T \hat{\beta}]  \\
+&= \mathbb{V}[(x_* )^T (X^TX)^{-1} X^Ty] \\
+&= (x_* )^T (X^TX)^{-1} X^T \cdot \sigma^2 \cdot I \cdot X (X^TX)^{-1} x_*] \\
+& = (x_*)^T(X^TX)^{-1}x_* \sigma^2
+\end{aligned}
+$$
+
+Here too, if we use the normality assumption, or asymptotic theory for large enough samples, we get that the distribution on the prediction is a normal distribution. And we can build confidence intervals, with either the normal quantile or the t quantile, depending if we assume $\sigma$ is known or not:
+
+$\mu^* \pm Z_{\alpha/2} \sqrt{\operatorname{Var}[\mu^*]}$ (when $\sigma$ is known)
+
+$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\widehat{\operatorname{Var}}[\mu^*]}$ (when $\sigma$ is estimated)
