@@ -41,8 +41,18 @@ $$
 
 - By differentiating and equating to zero, we can find the best parameters.
   - In the linear case (linear in the parameters, that is linear in $\beta$'s: $\beta^Tx$), we can find a closed form solution.
+
 ### :apple: 1.2.2 Maximum Likelihood
 Maximum likelihood assumes a distribution on the Y values. In the case of a normal distribution, the mean is assumed to be at the center of the distribution with some standard deviation. The goal is to choose beta coefficients that maximize the likelihood function, which is the product of the probability density function of the normal distribution for each observation. This function is maximized by differentiating the log of the likelihood function and equating to zero.
+
+|![image](https://user-images.githubusercontent.com/19381768/230558868-e7ed823a-caf1-42d7-bb7f-57f8a43d4840.png)|
+|:--:|
+|Maximum Likelihood Estimation|
+
+
+In maximum likelihood we assume that the $y$'s distribute, with a mean that depends on $x$;  that means, e.g. for the $y\sim N(\beta^Tx, \sigma^2) case, that for each $x$, we have a normal Gaussian centered around some point. 
+- If we connect the centers we would get a straight line
+- The means (centers) are different depending on the value of $x$. In the graph, for the lower $x$, the means are lower than for the higher .
 
 In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
 
