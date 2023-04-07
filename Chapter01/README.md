@@ -3,9 +3,9 @@
 ## 1.1 Linear Models
 
 3 assumptions:
-  1. Y's are independent
-  2. Each observation comes from a normal distribution with a mean mu I and variance Sigma square
-  3. Means mu I are related to predictor variables XI by a linear model X I transpose beta
+  1. $y$'s are independent
+  2. Each observation comes from a normal distribution: $y_i \sim (\mu, \sigma^2)$
+  3. Means $\mu_i$ are related to predictor variables $x_i$ by a linear model: $\mu_i = x_i^T \beta$
 
 Coefficients are linear
 Predictor variables can be transformed, but coefficients must be linear
