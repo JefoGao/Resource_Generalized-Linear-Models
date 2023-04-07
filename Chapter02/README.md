@@ -256,7 +256,7 @@ Let's look a bit more into the $b(\theta)$ function. The is sort of a normalizin
   - It is similar to the Moment-Generating-Function, only with a log
   - It has some cumulative property (hence the name) which we won't touch upon
 
-### :apple: 2.4.1 Log normalizer
+### :apple: 2.4.1 Mean
 
 Let's see a bit more what it means to be a log-normalizer. Essentially the log-normalizer is the log of the normalizing constant (in our case, times the scaling function), that is
 
@@ -298,3 +298,15 @@ b(\theta) &= \frac{db(\theta)}{d\theta} \\
 \end{aligned}
 $$
 
+### :apple: 2.4.2 Variance
+
+The 2nd derivative defines the variance function $V(\mu)$ - that is, it relates the mean and the variance of every exponential family distribution. If we multiply this by the dispersion parameter we get the actual variance of the distribution.
+
+$$b''(\theta)=\frac{d\mu}{d\theta}:=V(\mu)$$
+
+$$
+\begin{aligned}
+b''(\theta) &= \int y\cdot\frac{d}{d\theta}\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))dy \\
+&= \int y\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))(\frac{y-b'(\theta)}{a(\phi)})dy \\
+\end{aligned}
+$$
