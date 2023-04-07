@@ -45,6 +45,8 @@ $$
 ### :apple: 1.2.2 Maximum Likelihood
 Maximum likelihood assumes a distribution on the Y values. In the case of a normal distribution, the mean is assumed to be at the center of the distribution with some standard deviation. The goal is to choose beta coefficients that maximize the likelihood function, which is the product of the probability density function of the normal distribution for each observation. This function is maximized by differentiating the log of the likelihood function and equating to zero.
 
+In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
+
 |![image](https://user-images.githubusercontent.com/19381768/230558868-e7ed823a-caf1-42d7-bb7f-57f8a43d4840.png)|
 |:--:|
 |Maximum Likelihood Estimation|
@@ -88,6 +90,8 @@ arg \min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = arg m
 $$
 
   - Again, we see a multiplying constant $\frac{1}{2\sigma^2}$ that doesn't affect the arg min.
-In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
 
-The next video will provide more intuition on maximum likelihood by contrasting the unconstrained model to the constrained model.
+We see that for the normal distribution, the least squares and the maximum likelihood methods are actually equivalent - we are doing exactly the same.
+
+BUT - if we assume a different distribution for the $y$ - e.g., Bernoulli, Poisson, etc., the methods won't be equivalent - and we will only use Maximum Likelihood. 
+
