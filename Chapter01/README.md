@@ -49,10 +49,13 @@ Maximum likelihood assumes a distribution on the Y values. In the case of a norm
 |:--:|
 |Maximum Likelihood Estimation|
 
-
 In maximum likelihood we assume that the $y$'s distribute, with a mean that depends on $x$;  that means, e.g. for the $y\sim N(\beta^Tx, \sigma^2) case, that for each $x$, we have a normal Gaussian centered around some point. 
 - If we connect the centers we would get a straight line
-- The means (centers) are different depending on the value of $x$. In the graph, for the lower $x$, the means are lower than for the higher .
+- The means (centers) are different depending on the value of $x$. In the graph, for the lower $x$, the means are lower than for the higher $x$.
+
+How do you compute the maximum likelihood?
+- For each $y_i$ I have some probability of obtaining it
+  - E.g. in the normal case: $\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2}$
 
 In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
 
