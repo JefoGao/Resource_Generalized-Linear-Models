@@ -287,8 +287,14 @@ The 1st derivative of $b(\theta)$ (w.r.t. with reference to $\theta$) is equal t
 $$
 \begin{aligned}
 b(\theta) &= \frac{db(\theta)}{d\theta} \\
-&= a(\phi)\frac{db(\theta)}{d\theta}\log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
-&= a(\phi)\frac{1}{\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy}\int \frac{db(\theta)}{d\theta}\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
-
+&= a(\phi)\frac{d}{d\theta}\log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+&= a(\phi)\frac{1}{\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy}\int \frac{d}{d\theta}\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+&= \textcolor{red}{a(\phi)}\frac{1}{\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy}\int \frac{y}{\textcolor{red}{a(\phi)}}\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+&= \frac{1}{\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy}\int y\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy = \* \\
+& [\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy = e^{\frac{b(\theta)}{a(\phi)}}] \\
+\* &= e^{-\frac{b(\theta)}{a(\phi)}} \int y\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+&= \int y\exp(\frac{y\theta-b(\theta)}{a(\phi)}+c(y,\phi))dy \\
+&= \int y\cdot f_Y(y)dy = \mu
 \end{aligned}
 $$
+
