@@ -123,3 +123,20 @@ $$\hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n w_ie_i^2 = \arg\min_{\beta} (y-X\b
 And the solution would become:
 
 $$\hat{\beta} = (X^T W X)^{-1}X^T W y$$
+
+## ：herb: 0.6 Estimating $σ^2$
+
+Let’s define the sum of squared errors using the optimal parameters $\betâ$ 
+as RSS – Residual Sum of Squares:
+
+$$
+\text{RSS}=\sum_{i=1}^n(y_i-\betâ ^Tx_i)^2=\sum_{i=1}^n(y_i-\hat{\mu_i})^2
+$$
+
+where $\hat{\mu_i}$ is defined to be $\betâ ^Tx_i$. We are trying to estimate $V[y_i]$ which by definition of Variance is $=E[(y_i-μ_i)^2]$, and so it makes sense to estimate it using the data, replacing the theoretical mean with the sample average (“Monte-Carlo estimation”):
+
+$$
+V[y_i]=E[(y_i-μ_i)^2] \approx \frac{1}{n} \sum_{i=1}^n (y_i-\hat{\mu_i})^2 = \frac{\text{RSS}}{n}
+$$
+
+This turns out to be a biased estimator, due to the coefficients estimation already preformed for the $\beta$’s (who are hidden in the $\mu$’s). Instead we will usually use the unbiased estimator: $s^2=\frac{\text{RSS}}{n-(p+1)}$. The squared-root of it is also called the “Residual Standard Error”.
