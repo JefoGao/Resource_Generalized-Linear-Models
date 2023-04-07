@@ -66,8 +66,12 @@ $$
 $$
 ### :apple: 2.1.4 Normal distribution
 Normal distribution $y\sim N(\mu, \sigma^2)$
+
 $$
 \begin{aligned}
+f_Y(y) &= \frac{1}{\sqrt{2\pi}\sigma} \exp(-\frac{1}{2\sigma^2}(y-\mu)^2)\\
+&= \exp[-\frac{1}{2\sigma^2}(y^2-2y\mu+\mu^2)-\ln(\sqrt{2\pi}\sigma)]\\
+&= \exp[\frac{1}{\sigma^2}(y\cdot\mu-\frac{\mu^2}{2})-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma)]
 \end{aligned}
 $$
 
