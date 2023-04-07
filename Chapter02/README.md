@@ -142,3 +142,31 @@ So we see we can write:
 Overall we can get:
 
 $$p(Y=y)=\exp[y\cdot\theta-e^\theta-\ln(y!)]$$
+
+### :apple: 2.2.4 Negative Binomial
+Negative Binomial distribution $y\sim NB(r,p)$, where $r$ = # of failures before the experiment is stopped (sometimes defined oppositely).
+
+$$p(Y=y)=\binom{y+r-1}{y}(1-p)^rp^y$$
+
+Let's to write this in terms of the mean so we better understand the relations between the mean and the natural parameter (we could have left it as is, but is not the mean):
+
+$$\mu=\mathbb{E}[y]=\frac{pr}{1-p} \Rightarrow p=\frac{\mu}{\mu+r}$$
+
+$$
+\begin{aligned}
+p(nY=ny) &= \binom{n}{ny}p^{ny}(1-p)^{n-ny}\\
+&= \exp[ny\ln p + (n-ny)\ln(1-p)+\ln\binom{n}{ny}]\\
+&= \exp[n(y\cdot\ln(\frac{p}{1-p})+\ln(1-p))+\ln\binom{n}{ny}]
+\end{aligned}
+$$
+
+So we see we can write:
+- $a(\phi)=\frac{1}{n}$
+- $\theta=\ln(\frac{p}{1-p})$
+  - $\Rightarrow p=\sigma(\theta)=\frac{e^\theta}{1+e^\theta}$ 
+- $b(\theta)=\ln(\frac{1}{1-p})=\ln(1+e^\theta)$
+- $c(\phi,y)=\ln\binom{n}{ny}$
+
+Overall we can get:
+
+$$p(nY=ny)=\exp[n(y\cdot\theta+\ln(1+e^\theta))+\ln\binom{n}{ny}]$$
