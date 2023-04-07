@@ -239,3 +239,25 @@ There are a few differences:
 This is important. While there are many families of distribution that belong to the Exponential-Family, only a subset of them belong to EDM’s, and as such not all can be used in the GLM framework (the math just doesn’t turn out right…).
 
 For example, the Beta distribution belongs to the Exponential family, but is not an EDM, so one cannot do Beta regression with the GLM framework. Nevertheless – Beta regression was created separately quite recently, and it’s derivation is somewhat similar to GLM (see [Ferrari and Cribari-Neto, 2004](https://www.ime.usp.br/~sferrari/beta.pdf) and [Cribari-Neto and Zeileis, 2012](https://cran.r-project.org/web/packages/betareg/vignettes/betareg.pdf) for more details.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
+## :herb: 2.4 Exponential Family - Mean and Variance
+
+Remember the exponential family representation of PDF's/PMF's:
+
+$$f_Y(y)=\exp(\frac{1}{a(\phi}[y\cdot\theta-b(\theta)+c(y,\phi)])$$
+
+Let's look a bit more into the $b(\theta)$ function. The is sort of a normalizing constant of the distribution - the exponent though makes it the normalizer of the `log` distribution, and not the actual distribution. Because of this, it is known by a few names:
+- Log-normalizer
+- Log-partition
+  - partition function = another name for a normalizing function which comes from the field of physics (physics names are often very poor when discussing general concepts in statistics). It is a function because it can still depend on parameters; if they are all known it becomes a constant.
+- Cumulant
+  - It is similar to the Moment-Generating-Function, only with a log
+  - It has some cumulative property (hence the name) which we won't touch upon
+
+### :apple: 2.4.1 Log normalizer
+
+Let's see a bit more what it means to be a log-normalizer. Essentially the log-normalizer is the log of the normalizing constant (in our case, times the scaling function), that is
+
+$$b(\theta)=a(\phi)\cdot\log\int\exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta)))dy$$
