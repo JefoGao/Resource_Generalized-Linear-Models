@@ -192,7 +192,9 @@ If we use the estimate for $s^2=\hat{\sigma}^2$ and denote the variance of the $
 
 $$ \frac{\hat{\beta_j}-\beta_j}{\sqrt{\hat{\mathbb{V}}(\hat{\beta_j})}} = \frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}} \sim t_{n-p-1} $$
 
-Because it can be shown that $ \frac{n-p-1}{\sigma^2} s^2 = \frac{RSS}{\sigma^2} \sim \chi_{n-p-1}^2 $
+Because it can be shown that $\frac{n-p-1}{\sigma^2} s^2 = \frac{RSS}{\sigma^2} \sim \chi_{n-p-1}^2$, and the fact that
+
+$$\frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}} = \frac{\frac{\hat{\beta_j}-\beta_j}{s\sqrt{A_{jj}}}}{sqrt{\frac{n-p-1}{\sigma^2}s^2/(n-p-1)}} = \frac{Z}{sqrt{\frac{\chi_{n-p-1}^2}{n-p-1}}}\sim t_{n-p-1}$$
 
 
 We can thus develop hypothesis tests and confidence intervals on $\beta$.
