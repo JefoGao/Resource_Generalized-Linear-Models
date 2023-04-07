@@ -279,3 +279,16 @@ $$
 &\Rightarrow b(\theta) = a(\phi)\log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy
 \end{aligned}
 $$
+
+So this $b(\theta)$ function is equal to (the dispersion function $a(\phi)$, times) the log of the normalizing function. Hence the name log-normalizer / log-partition.
+
+The 1st derivative of $b(\theta)$ (w.r.t. with reference to $\theta$) is equal to the mean of the distribution. Let's see this:
+
+$$
+\begin{aligned}
+b(\theta) &= \frac{db(\theta)}{d\theta} \\
+&= a(\phi)\frac{db(\theta)}{d\theta}\log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+&= a(\phi)\frac{1}{\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy}\int \frac{db(\theta)}{d\theta}\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy \\
+
+\end{aligned}
+$$
