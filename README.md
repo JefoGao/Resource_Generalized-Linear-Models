@@ -124,7 +124,7 @@ And the solution would become:
 
 $$\hat{\beta} = (X^T W X)^{-1}X^T W y$$
 
-## ：herb: 0.6 Estimating $σ^2$
+## :herb: 0.6 Estimating $σ^2$
 
 Let’s define the sum of squared errors using the optimal parameters $\betâ$ 
 as RSS – Residual Sum of Squares:
