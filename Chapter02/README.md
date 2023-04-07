@@ -1,5 +1,7 @@
 # 2 Exponential Family
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 2.1 Definition and Example
 
 The exponential family, also known as the Exponential Dispersion Model (EDM) is a general way of writing many of known distributions.
@@ -85,10 +87,23 @@ Overall we get:
 
 $$p(Y=y)=\exp(\frac{1}{\sigma^2}(y\cdot\theta-\frac{\theta^2}{2})-\frac{y^2}{2\sigma^2}-\ln(\sqrt{2\pi}\sigma))$$
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
+## :herb: 2.2 More Examples
 
+### :apple: 2.2.1 Non exponential family
+Before we go on the other distributions, we want to know first what isn't in the exponential family.
+- Uniform
+- T
+- Mixtrue distributions (e.g. GMM's)
+
+### :apple: 2.2.2 Binomial
+Let's transform our $y$'s by dividing it by $n$, to get the empirical ratios $y\in[0,\frac{1}{n},\frac{2}{n},\cdots,1]$
+
+$$y^*=n\cdot y\sim Bin(n,p)$$
 
 $$
 \begin{aligned}
+
 \end{aligned}
 $$
