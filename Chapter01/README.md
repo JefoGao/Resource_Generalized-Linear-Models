@@ -171,7 +171,7 @@ Using the canonical link simplifies some of the math when doing maximum likeliho
 
 ### :apple: 1.4.4 What isn't a link function?
 - A link function isn't transforming the predictors / covariates, i.e. if we take the function to be log, it's not saying $y=\beta_0+\beta_1 \log(x)$
-- And it's also not transforming the response and leaving the distribution to be normal. I.e., it's not saying: $\log (y_i)=\beta_0+\beta_1x_i+\epsilon_i, \epsilon_i \simN(\0, \sigma^2)$
+- And it's also not transforming the response and leaving the distribution to be normal. I.e., it's not saying: $\log (y_i)=\beta_0+\beta_1x_i+\epsilon_i, \epsilon_i \sim N(0, \sigma^2)$
 - The response and predictors remain the same. Only the mean changes.
 
 In summary,
