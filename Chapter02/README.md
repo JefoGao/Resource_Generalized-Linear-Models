@@ -270,4 +270,12 @@ Since the 2nd term doesn't depend on y, we can take it out of the integral:
 
 $$1=\exp(-\frac{b(\theta)}{a(\phi)})\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy$$
 
-So $\exp(-\frac{b(\theta)}{a(\phi)})$ is the normalizing constant of the distribution
+So $\exp(-\frac{b(\theta)}{a(\phi)})$ is the normalizing constant of the distribution of the terms in the PDF that depends on $y$. Dividing by this term we get:
+
+$$
+/begin{aligned}
+&\Rightarrow \exp(\frac{b(\theta)}{a(\phi)}) = \int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy\\
+&\Rightarrow \frac{b(\theta)}{a(\phi)} = \log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy\\ 
+&\Rightarrow b(\theta) = a(\phi)\log\int\exp(\frac{y\theta}{a(\phi)}+c(y,\phi))dy
+/end{aligned}
+$$
