@@ -230,3 +230,51 @@ Here too, if we use the normality assumption, or asymptotic theory for large eno
 $$\mu^* \pm Z_{\alpha/2} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is known)} $$
 
 $$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
+
+## :herb: 0.11 How good is our model? R2, F test and AIC/BIC
+
+We would like to devise tools to measure how good is our model, and to compare different models.
+
+The basic way to do so is by analysis of variance. We can decompose our observation yi as:
+
+$$
+y_i = \hat{\mu}_i + (y_i - \hat{\mu}_i) = \hat{\mu}_i + e_i = \text{fit} + \text{residual}
+$$
+
+If we “de-mean” the observations (subtract the mean and center them around 0), we would get:
+
+$$
+y_i - \bar{y} = \hat{\mu}_i - \bar{y} + (y_i - \hat{\mu}_i)
+$$
+
+If we now square each side and sum over all observations we would get:
+
+$$
+\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu}_i - \bar{y} + (y_i - \hat{\mu}_i))^2 = \sum_{i}(\hat{\mu}_i - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2 + 2\sum_{i}(\hat{\mu}_i - \bar{y})(y_i - \hat{\mu}_i)
+$$
+
+Looking at the last term,
+
+$$
+\sum_{i}(\hat{\mu}_i - \bar{y})(y_i - \hat{\mu}_i) = \sum_{i}\hat{\mu}_i(y_i - \hat{\mu}_i) - \bar{y}\sum_{i}(y_i - \hat{\mu}_i)
+$$
+
+The 2nd term is the sum of the residuals which is equal to 0. The 1st term is also equal to 0, which is easier to see in matrix notation:
+
+$$
+\sum_{i}\hat{\mu}_i(y_i - \hat{\mu}_i) = (X\beta)^T(y - X\beta) = \beta^TX^T(y - X\beta) = \beta^T[X^T(y - X(X^TX)^{-1}X^Ty)] = X^T(y - X(X^TX)^{-1}X^Ty) = X^Ty - X^Ty = 0
+$$
+
+We get,
+
+$$
+\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu}_i - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2
+$$
+
+The left-hand-side (LHS) is called the Total Sum of Squares (TSS) – it is the variance of the y’s (multiplied by n). The 1st term on the right-hand-side (RHS) is called the Explained Sum of Squares, or the Regression Sum of Squares (ESS) – it is the part of the total variance explained by the regression model. The 2nd term on the RHS is the familiar RSS – it is the part of the total variance not explained by the regression model. So we got that,
+
+$$
+TSS = ESS + RSS
+$$
+
+R2 is defined to be $ESS/TSS = 1-RSS/TSS$ – i.e., the proportion of the data-variance that is explained by the model. It is a number between 0 and 1, where 1
