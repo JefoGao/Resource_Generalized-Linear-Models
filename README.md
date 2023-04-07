@@ -109,3 +109,17 @@ X^{\mathrm{T}}X \hat{\beta} &= X^{\mathrm{T}}y \\
 $$
 
 This last equation is called the “Normal Equations”. We assume here $X^{\mathrm{T}}X$ is invertible, but it’s almost always the case for a design matrix with more rows (observations) than columns (predictors) [also assuming no perfect linear dependence exists between predictors]. This is the solution to “Ordinary Least Squares” (OLS).
+
+## :herb: 0.5 Weights
+
+We can also incorporate weights into the analysis. There are different reasons why we might choose to give more weight to certain observations over other observations. This in turn will pull the regression line to be closer to the observations with more weights. 
+
+For example, each point might represent multiple observations. So each point $(x_i,y_i)$ has a corresponding $w_i = n_i$ "weight". Another example is heteroskedastic variance: suppose we know some regions of $x$ have lower variance than others – this implies we need to give more weight for observations in the lower variance regions than the ones in the higher regions. And other reasons exist.
+
+If we would have used weights which give more importance to some points (and hence errors) than others, and express them as a diagonal $(n,n)$ weight matrix $W$, the solution to the optimization problem would change to:
+
+$$\hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n w_ie_i^2 = \arg\min_{\beta} (y-X\beta)^T W (y-X\beta)$$
+
+And the solution would become:
+
+$$\hat{\beta} = (X^T W X)^{-1}X^T W y$$
