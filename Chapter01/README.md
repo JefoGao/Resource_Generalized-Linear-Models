@@ -56,6 +56,36 @@ In maximum likelihood we assume that the $y$'s distribute, with a mean that depe
 How do you compute the maximum likelihood?
 - For each $y_i$ I have some probability of obtaining it
   - E.g. in the normal case: $\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2}$
+- Let's take the product across all observations; Continuing with the normal case:
+
+$$
+\mathcal{L} = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2}
+$$
+
+- The $arg max$ is the same for the likelihood or the log-likelihood, so easier to take the log and turn the product into a sum; Continuing:
+
+$$
+\begin{aligned}
+\ell := log\mathcal{L} &= log \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2}\\
+&= \sum_{i=1}^n log (\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2})\\
+&= \sum_{i=1}^n [log (\frac{1}{\sqrt{2\pi}\sigma}) - \frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
+\end{aligned}
+$$
+  
+  - The first term $log (\frac{1}{\sqrt{2\pi}\sigma})$ doesn't depend on the parameters we optimize, so we can discard it
+
+$$
+\begin{aligned}
+arg max_{\beta} \ell &= arg max_{\beta} - \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] \\
+&= arg min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
+\end{aligned}
+$$
+
+  - Maximizing a negative quantity is the same as minimizing the positive quantity
+
+$$
+arg min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = arg min_{\beta}
+$$
 
 In the case of a normal distribution, the results of the maximum likelihood method and least squares method are the same. However, if the Y values come from a non-normal distribution such as a Bernoulli distribution or a Poisson distribution, the maximum likelihood method is used to compute the values of the coefficients that will maximize the distribution. In generalized linear models, the Y values are not necessarily from a normal distribution and can come from skewed distributions like a gamma distribution or a chi-squared distribution. 
 
