@@ -203,6 +203,7 @@ We can thus develop hypothesis tests and confidence intervals on $\beta$.
 For confidence intervals we get:
 
 $$ \hat{\beta_j} \pm Z_{\alpha/2} \sqrt{Var(\hat{\beta_j})} \quad \text{(when } \sigma^2 \text{ is known)} $$
+
 $$ \hat{\beta_j} \pm t_{\alpha/2,n-p-1} \sqrt{\hat{Var}(\hat{\beta_j})} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
 
 where $t_{\alpha/2,n-p-1}$ refers to the $\alpha/2$ quantile of the $t_{n-p-1}$ distribution. 
@@ -226,6 +227,6 @@ $$
 
 Here too, if we use the normality assumption, or asymptotic theory for large enough samples, we get that the distribution on the prediction is a normal distribution. And we can build confidence intervals, with either the normal quantile or the t quantile, depending if we assume $\sigma$ is known or not:
 
-$\mu^* \pm Z_{\alpha/2} \sqrt{\operatorname{Var}[\mu^*]}$ (when $\sigma$ is known)
+$$\mu^* \pm Z_{\alpha/2} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is known)} $$
 
-$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\widehat{\operatorname{Var}}[\mu^*]}$ (when $\sigma$ is estimated)
+$$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
