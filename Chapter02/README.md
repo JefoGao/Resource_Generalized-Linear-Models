@@ -316,4 +316,4 @@ $$
 
 - Note that in the normal distribution $V[\mu]=1$, i.e., the mean doesn't affect the variance; but in other distributions in the expo. family, the variance depends on the mean.
 - $V[\mu]$ uniquely determines the distribution in the exponential family. So if I give you a $V[\mu]& then you know what the assumed distribution is.
-- You can go back to the examples in the previous videos, and calculate the mean and the variance function (parameterized by $\theta$).
+- You can go back to the examples in the previous sections, and calculate the mean and the variance function (parameterized by $\theta$).
