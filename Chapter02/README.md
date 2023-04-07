@@ -8,7 +8,7 @@ The exponential family, also known as the Exponential Dispersion Model (EDM) is 
 A distribution is part of the Exponential Family if it's PDF (probability density function)/PMF (probability mass function) can be written in the following form:
 
 $$
-f_Y(y) = exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta))+c(y,\phi))=e^{\frac{1}{a(\phi)}(y\cdot\theta-b(\theta))+c(y,\phi)}
+f_Y(y) = \exp(\frac{1}{a(\phi)}(y\cdot\theta-b(\theta))+c(y,\phi))=e^{\frac{1}{a(\phi)}(y\cdot\theta-b(\theta))+c(y,\phi)}
 $$
 
 So we can write the PDF/PMF as:
