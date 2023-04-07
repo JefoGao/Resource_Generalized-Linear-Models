@@ -39,3 +39,29 @@ Prediction is used to predict `$y$` for a new `$x$`, and to do so well enough. H
 - GLMs work on any distribution from the Exponential Family.
 - Available software packages use the IRLS method to fit GLMs numerically.
 - R implementation is limited to commonly used distributions, but external packages offer additional GLMs.
+
+## :herb: 0.3 Linear Models
+
+Linear models or linear regression is a statistical model of the form:
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip} + \epsilon_i$$
+
+where $p$ is the number of predictors we have, and this implies $p+1$ unknown coefficients with the intercept.
+
+The model consists of two parts:
+- Systematic component (Linear Predictor): $\beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip}$
+- Random component: $\epsilon_i$
+
+The linearity comes from the linearity of the coefficients $\beta$. The predictor terms $x$ are considered known, and from the linearity perspective, we don’t care which transformation is used upon them. 
+
+Linear models assume that:
+- $\mathbb{E}[\epsilon_i] = 0$ and $\operatorname{Var}[\epsilon_i] = \sigma^2$ for all $i$.
+- The response variable $y$ has mean $\mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_dx_{ip}$ and variance $\sigma^2$.
+- The observations are independent and identically distributed (IID).
+
+A common assumption is that $\epsilon_i \sim N(0, \sigma^2)$. This is sometimes referred to as "Normal Linear Models", but it is sometimes used also to describe Linear Models. Another fundamental assumption is homoscedasticity, that is, the variance doesn’t change as a function of the mean.
+
+So there are a few major assumptions to conduct a LM analysis:
+- $y$ is IID.
+- Homoscedasticity: $\operatorname{Var}[y_i] = \sigma^2$.
+- The relationship between $y$ and $x$ is linear: $\mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_dx_{ip}$.
