@@ -259,7 +259,7 @@ $$
 Looking at the last term,
 
 $$
-\sum_{i}(\hat{\mu}_i - \bar{y})(y_i - \hat{\mu}_i) = \sum_{i}\hat{\mu}_i(y_i - \hat{\mu}_i) - \bar{y}\sum_{i}(y_i - \hat{\mu}_i)
+\sum_{i}(\hat{\mu_i} - \bar{y})(y_i - \hat{\mu_i}) = \sum_{i}\hat{\mu_i}(y_i - \hat{\mu_i}) - \bar{y}\sum_{i}(y_i - \hat{\mu_i})
 $$
 
 The 2nd term is the sum of the residuals which is equal to 0. The 1st term is also equal to 0, which is easier to see in matrix notation:
@@ -271,7 +271,7 @@ $$
 We get,
 
 $$
-\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu}_i - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2
+\sum_{i}(y_i - \bar{y})^2 = \sum_{i}(\hat{\mu_i} - \bar{y})^2 + \sum_{i}(y_i - \hat{\mu}_i)^2
 $$
 
 The left-hand-side (LHS) is called the Total Sum of Squares (TSS) – it is the variance of the y’s (multiplied by n). The 1st term on the right-hand-side (RHS) is called the Explained Sum of Squares, or the Regression Sum of Squares (ESS) – it is the part of the total variance explained by the regression model. The 2nd term on the RHS is the familiar RSS – it is the part of the total variance not explained by the regression model. So we got that,
