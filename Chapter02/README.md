@@ -152,20 +152,25 @@ Let's to write this in terms of the mean so we better understand the relations b
 
 $$\mu=\mathbb{E}[y]=\frac{pr}{1-p} \Rightarrow p=\frac{\mu}{\mu+r}$$
 
+So we have,
+
 $$
 \begin{aligned}
-p(nY=ny) &= \binom{n}{ny}p^{ny}(1-p)^{n-ny}\\
-&= \exp[ny\ln p + (n-ny)\ln(1-p)+\ln\binom{n}{ny}]\\
-&= \exp[n(y\cdot\ln(\frac{p}{1-p})+\ln(1-p))+\ln\binom{n}{ny}]
+p(Y=y) &= \binom{y+r-1}{y}(1-p)^rp^y\\
+&= \binom{y+r-1}{y}(1-\frac{\mu}{\mu+r})^r(\frac{\mu}{\mu+r})^y \\
+&= \binom{y+r-1}{y}(\frac{r}{\mu+r})^r(\frac{\mu}{\mu+r})^y\\
+&= \exp[y\ln(\frac{\mu}{\mu+r})+r\ln(\frac{r}{\mu+r})+\ln\binom{y+r-1}{y}]
 \end{aligned}
 $$
 
 So we see we can write:
-- $a(\phi)=\frac{1}{n}$
-- $\theta=\ln(\frac{p}{1-p})$
-  - $\Rightarrow p=\sigma(\theta)=\frac{e^\theta}{1+e^\theta}$ 
-- $b(\theta)=\ln(\frac{1}{1-p})=\ln(1+e^\theta)$
-- $c(\phi,y)=\ln\binom{n}{ny}$
+- $a(\phi)=1$
+- $\theta=\ln(\frac{\mu}{\mu+r})=\ln p$
+  - $\Rightarrow \frac{\mu}{\mu+r}=e^\theta$ 
+  - $\Rightarrow \mu=\mu\cdot e^\theta+r\cdot e^\theta$
+  - $\Rightarrow \mu=\frac{r\cdot e^\theta}{1-e^\theta}$
+- $b(\theta)=-r\ln(\frac{r}{\mu+r})=r\ln(\frac{\mu+r}{r})=r\ln(\frac{\frac{r}{1-e\theta}}{r})=-r\ln(1-e^\theta)$
+- $c(\phi,y)=\ln\binom{y+r-1}{y}$
 
 Overall we can get:
 
