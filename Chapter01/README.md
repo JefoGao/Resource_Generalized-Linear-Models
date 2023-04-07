@@ -157,6 +157,23 @@ log(\frac{\mu_i}{1-\mu_i}) &= LP_i\\
 \end{aligned}
 $$
 
+Link functions must also be differentiable (we use differentiation in Maximum Likelihood).
+
+### :apple: 1.4.3 Canonical Link Function
+
+The "natural parameter" of the Exponential Family is equal to the linear predictor
+- We will see what is the natural parameter in the next part; Each exponential family has a natural parameter
+- The natural parameter is some function of the mean
+- Let's for now denote it by: $\theta(\mu_i) = \theta_i$
+- The canonical link function states: $\theta_i=LP_i=\beta^Tx_i$
+
+Using the canonical link simplifies some of the math when doing maximum likelihood. But it doesn't always make sense, and abides the reasons stated above (e.g., in Gamma regression, the canonical link function is not interpretable in some cases)
+
+### :apple: 1.4.4 What isn't a link function?
+- A link function isn't transforming the predictors / covariates, i.e. if we take the function to be log, it's not saying $y=\beta_0+\beta_1 \log(x)$
+- And it's also not transforming the response and leaving the distribution to be normal. I.e., it's not saying: $\log (y_i)=\beta_0+\beta_1x_i+\epsilon_i, \epsilon_i \simN(\0, \sigma^2)$
+- The response and predictors remain the same. Only the mean changes.
+
 In summary,
 - The function $g(\mu)$ is needed to transform the structure to a linear structure in cases where the linear structure is inadequate. 
 - The link function is also used for interpretability, ensuring that the values of mu make sense. 
