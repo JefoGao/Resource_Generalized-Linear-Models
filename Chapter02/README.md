@@ -33,7 +33,12 @@ p(Y=y) &= p^y(1-p)^{1-y}\\
 \end{aligned}
 $$
 
-
+So we can write:
+- $a(\phi)=1$, no dispersion parameter
+- $\theta=\ln(\frac{p}{1-p})$
+  - $\Rightarrow p=\sigma(\theta)=\frac{e^\theta}{1+e^\theta}$ 
+- $b(\theta)=\ln(\frac{1}{1-p})=\ln(1+e^\theta)$
+- $c(\phi,y)=0$
 
 $$
 \begin{aligned}
