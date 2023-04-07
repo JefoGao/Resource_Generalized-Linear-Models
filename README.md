@@ -167,6 +167,6 @@ Var[(X^TX)^{-1}X^Ty] &= (X^TX)^{-1}X^T \cdot Var[y] \cdot ((X^TX)^{-1}X^T)^T \\
 \end{aligned}
 $$
 
-We have used the homoscedasticity assumption for $Var[y] = \sigma^2 I$ where I is the $(n,n)$ identity matrix. We also used the fact that $(X^TX)^{-1T} = (X^TX)^{-1}$. We usually also replace $\sigma^2$ with its estimation to get an estimate for the variance of the coefficients.
+We have used the homoscedasticity assumption for $Var[y] = \sigma^2\cdot I$ where $I$ is the $(n,n)$ identity matrix. We also used the fact that $(A^{-1})^{T} = (A^T)^{-1}$. We usually also replace $\sigma^2$ with its estimation to get an estimate for the variance of the coefficients.
 
 Once we have the variance of the coefficients, we can build confidence intervals on them or conduct hypothesis testing (either using the normal distributional assumption, or asymptotic theory).
