@@ -272,7 +272,7 @@ $$
 \end{aligned}
 $$
 
-and
+Where
 
 $$
 \begin{aligned}
