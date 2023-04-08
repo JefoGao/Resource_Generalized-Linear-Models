@@ -35,7 +35,7 @@ $$d(y,\mu)=2(t(y,y)-t(y,\mu))$$
 
 Since the 1st term is the maximum, this quantity is always non-negative.
 
-So the unit deviance is small when $\mu=y$, and it grows when \mu is far from $y$ - just like regular residuals.
+So the unit deviance is small when $\mu=y$, and it grows when $\mu$ is far from $y$ - just like regular residuals.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
