@@ -67,3 +67,12 @@ Note that the unit deviance is not symmetric, i.e., it's not a proper distance m
 ## :herb: 3.4 The distribution of the unit deviance
 
 We can write the exponential family representation in terms of the unit deviance:
+
+$$
+\begin{aligned}
+f_Y(y) &= \exp(\frac{1}{a(\phi)}t(y,\mu)+c(y,\phi)) \\
+&= \exp(-\frac{1}{2a(\phi)}\textcolor{cyan}{(-2)t(y,\mu)}+\frac{1}{2a(\phi)}\textcolor{cyan}{2t(y,y)}-\frac{1}{2a(\phi)}2t(y,y)+c(y,\phi))\\
+&= \exp(-\frac{1}{2a(\phi)}\textcolor{cyan}{d(y,\mu)}\textcolor{red}{-\frac{1}{2a(\phi)}2t(y,y)+c(y,\phi)}) \\
+&= \exp(-\frac{1}{2a(\phi)}d(y,\mu)+\textcolor{red}{\tilde{c}(y,\phi)})
+\end{aligned}
+$$
