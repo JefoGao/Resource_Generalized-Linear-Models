@@ -88,3 +88,9 @@ If we use this approximation, then
 $$\frac{d(y,\mu)}{a(\phi)}\sim \chi_1^2$$
 
 Which also means that $\mathbb{E}[d]=a(\phi)$
+
+## :herb: 3.5 Total Deviance
+
+The total deviance is simply the sum of the unit deviance for all the observations in our data:
+
+$$D=\sum_{i=1}^n d(y_i, \mu_i), \qquad \frac{D}{a(\phi)}\sim\chi_n^2$$
