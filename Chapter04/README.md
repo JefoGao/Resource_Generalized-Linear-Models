@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
-# :herb: 4.1 Likelihood Analysis
+## :herb: 4.1 Likelihood Analysis
 
 We want to find the coefficients of our model, that is, the $\beta$'s that relate our predictors / covariates to the response:
 
@@ -12,7 +12,7 @@ We will denote the linear predictor by $\eta$.
 
 Remember that in GLM, we find the predictors that maximize the likelihood. Maximizing the likelihood is exactly like maximizing the log-likelihood (since log is a monotonic transformation). So we will maximize the log-likelihood of our data.
 
-## :apple: 4.1.1 General Analysis
+### :apple: 4.1.1 General Analysis
 For a given problem we will have to decide
 - What is the plausible distribution of our data
 - What is the link function that connects the mean of the distribution to the predictors
