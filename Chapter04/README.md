@@ -128,3 +128,9 @@ $$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}(y-\mu)^TX \qquad \text{(f
 $$y_i\sim Poisson(\lambda_i)$$
 
 $$f_Y(y_i)=\frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}=\exp[y_i\ln\lambda_i-\lambda_i-\ln y_i!]$$
+
+Mainly for practice, let's remember what are the different terms in the general exponential family representation:
+- $a(\phi)=1$
+- $\theta_i=\ln\lambda_i\Rightarrow\lambda_i=e^{\theta_i}$
+- $b(\theta_i)=e^{\theta_i}\Rightarrow b'(\theta_i)=e^{\theta_i}$
+- $c(y_i,\phi)=-\ln y_i!$
