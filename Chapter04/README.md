@@ -166,4 +166,44 @@ The algorithm works as follows:
 
 One advantage of the Newton Raphson algorithm is that it converges faster than other optimization algorithms, such as gradient descent. However, it can be sensitive to the initial values of the parameters and may not converge if the starting values are too far from the true parameter values.
 
-In summary, Newton Raphson is an iterative algorithm for finding the maximum likelihood estimates of the parameters in a GLM. It works by iteratively updating the parameter estimates based on the predicted means and working responses computed for each observation in the data set. While it can converge faster than other optimization algorithms, it can be sensitive to the initial parameter values and may not converge if the starting values are too far from the true values.
+## :herb: 4.3 Fisher Scoring in GLM
+
+Fisher Scoring is an iterative algorithm used in generalized linear models (GLMs) to estimate the maximum likelihood parameters. It is similar to the Newton-Raphson method, but instead of using the Hessian matrix to update the parameters, it uses an approximation of the Hessian matrix, known as the Fisher information matrix.
+
+### :apple: 4.3.1 The Fisher information matrix
+
+The Fisher information matrix (FIM) is a matrix of second derivatives of the log-likelihood function with respect to the model parameters. In a GLM, the FIM is defined as:
+
+$$\mathbf{F}(\boldsymbol{\theta}) = -\mathbb{E} \left[ \frac{\partial^2 \ell(\boldsymbol{\theta};\mathbf{y})}{\partial \boldsymbol{\theta} \partial \boldsymbol{\theta}^T} \right]$$
+
+where $\boldsymbol{\theta}$ is the vector of model parameters, $\ell(\boldsymbol{\theta};\mathbf{y})$ is the log-likelihood function, and $\mathbb{E}$ denotes the expected value operator.
+
+### :apple: 4.3.2 Fisher Scoring algorithm
+
+The Fisher Scoring algorithm iteratively updates the parameter estimates as follows:
+
+1. Initialize the parameter vector $\boldsymbol{\theta}$.
+2. Calculate the score vector $\mathbf{U}(\boldsymbol{\theta})$, which is the gradient of the log-likelihood function with respect to $\boldsymbol{\theta}$.
+3. Calculate the Fisher information matrix $\mathbf{F}(\boldsymbol{\theta})$.
+4. Update the parameter vector:
+
+   $$\boldsymbol{\theta}_{new} = \boldsymbol{\theta}_{old} + \left[ \mathbf{F}(\boldsymbol{\theta}_{old}) \right]^{-1} \mathbf{U}(\boldsymbol{\theta}_{old})$$
+
+5. Repeat steps 2-4 until convergence.
+
+The Fisher Scoring algorithm is more computationally efficient than the Newton-Raphson method because it avoids calculating the Hessian matrix directly, which can be expensive for large datasets.
+
+### :apple: 4.3.3 Advantages and disadvantages
+
+The Fisher Scoring algorithm has several advantages over the Newton-Raphson method:
+
+- It is more computationally efficient because it avoids calculating the Hessian matrix directly.
+- It can handle singular or nearly singular Hessian matrices, which can cause problems for the Newton-Raphson method.
+
+However, it also has some disadvantages:
+
+- It can be less stable than the Newton-Raphson method for certain types of models.
+- It requires calculating the expected value of the second derivative of the log-likelihood function, which can be difficult or impossible to do analytically for some models.
+
+Overall, the Fisher Scoring algorithm is a useful alternative to the Newton-Raphson method for estimating maximum likelihood parameters in GLMs. It is particularly useful for large datasets or models with singular or nearly singular Hessian matrices.
+
