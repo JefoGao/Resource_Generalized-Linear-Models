@@ -43,8 +43,8 @@ Let's break down each component by itself:
 $$
 \begin{aligned}
 &\textcolor{magenta}{\frac{\partial\ell_i}{\partial\theta_i}}=\frac{\partial(\frac{1}{a(\phi)}(y_i\cdot\theta-b(\theta))+c(y_i,\phi))}{\partial\theta_i}=\frac{y_i-b'(\theta)}{a(\phi)} \\
-&\textcolor{cyan}{\frac{\partial\eta_i}{\partial\beta_j}}=\frac{\partial(\beta^Tx_i)}{\partial\beta_j}=x_{ij}\\
 &\textcolor{orange}{\frac{\partial\theta_i}{\partial\mu_i}}=\frac{1}{V(\mu_i)}\\
-&\textcolor{lime}{\frac{\partial\mu_i}{\partial\eta_i}}=???
+&\textcolor{lime}{\frac{\partial\mu_i}{\partial\eta_i}}=???\\
+&\textcolor{cyan}{\frac{\partial\eta_i}{\partial\beta_j}}=\frac{\partial(\beta^Tx_i)}{\partial\beta_j}=x_{ij}
 \end{aligned}
 $$
