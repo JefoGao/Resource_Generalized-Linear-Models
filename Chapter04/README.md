@@ -145,4 +145,4 @@ Or in vector form:
 
 $$\frac{\partial\ell}{\partial\beta_j}=\frac{1}{a(\phi)}X^T(y-\mu)=X^T(y-e^{X\beta})$$
 
-Where $e^{x\beta}$ is taking the element-wise exponent of each element in the $x\beta$ vector.
+Where $e^{X\beta}$ is taking the element-wise exponent of each element in the $X\beta$ vector.
