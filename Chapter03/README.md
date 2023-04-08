@@ -53,3 +53,13 @@ $$
 &d(y,\mu) = 2[(y\cdot y-\frac{y^2}{2}) - (y\cdot\mu-\frac{\mu^2}{2})] = y^2 - 2y\mu+\mu^2=(y-\mu)^2
 \end{aligned}
 $$
+
+Here it comes out that the unit deviance is equal to the squared residual in the Linear-Model. But for other distributions this is not the case.
+
+## :herb: Measure of Similarity
+
+Note that the unit deviance is not symmetric, i.e., it's not a proper distance metric, but it is a measure of similarity/dis-similarity:
+
+|![image](https://user-images.githubusercontent.com/19381768/230702439-59f3b1bf-6ee7-43b9-84e9-eba7c472ab02.png)|
+|:--:|
+|Unit deviance of different GLMs|
