@@ -76,3 +76,15 @@ f_Y(y) &= \exp(\frac{1}{a(\phi)}t(y,\mu)+c(y,\phi)) \\
 &= \exp(-\frac{1}{2a(\phi)}d(y,\mu)+\textcolor{magenta}{\tilde{c}(y,\phi)})
 \end{aligned}
 $$
+
+We can approximate this function using Laplace's method (aka Saddle Point approximation)
+
+$$\exp(-\frac{1}{2a(\phi)}d(y,\mu)+\tilde{c}(y,\phi))\approx\frac{1}{\sqrt{2\pi a(\phi)V(y)}}\exp[-\frac{1}{2a(\phi)}d(y,\mu)]$$
+
+Where $V(y)$ is the variance function $V(\mu)$ evaluated for $\mu=y$.
+
+If we use this approximation, then
+
+$$\frac{d(y,\mu)}{a(\phi)}\sim \chi_1^2$$
+
+Which also means that $\mathbb{E}[d]=a(\phi)$
