@@ -168,7 +168,7 @@ One advantage of the Newton Raphson algorithm is that it converges faster than o
 
 ## :herb: 4.3 Fisher Scoring in GLM
 
-Fisher Scoring is an iterative algorithm used in generalized linear models (GLMs) to estimate the maximum likelihood parameters. It is similar to the Newton-Raphson method, but instead of using the Hessian matrix to update the parameters, it uses an approximation of the Hessian matrix, known as the Fisher information matrix.
+Fisher Scoring is another iterative algorithm used in generalized linear models (GLMs) to estimate the maximum likelihood parameters. It is similar to the Newton-Raphson method, but instead of using the Hessian matrix to update the parameters, it uses an approximation of the Hessian matrix, known as the Fisher information matrix.
 
 ### :apple: 4.3.1 The Fisher information matrix
 
