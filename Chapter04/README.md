@@ -170,6 +170,8 @@ The algorithm works as follows:
 
 One advantage of the Newton Raphson algorithm is that it converges faster than other optimization algorithms, such as gradient descent. However, it can be sensitive to the initial values of the parameters and may not converge if the starting values are too far from the true parameter values.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 4.3 Fisher Scoring
 
 Fisher Scoring is another iterative algorithm used in generalized linear models (GLMs) to estimate the maximum likelihood parameters. It is similar to the Newton-Raphson method, but instead of using the Hessian matrix to update the parameters, it uses an approximation of the Hessian matrix, known as the Fisher information matrix.
@@ -210,6 +212,8 @@ However, it also has some disadvantages:
 - It requires calculating the expected value of the second derivative of the log-likelihood function, which can be difficult or impossible to do analytically for some models.
 
 Overall, the Fisher Scoring algorithm is a useful alternative to the Newton-Raphson method for estimating maximum likelihood parameters in GLMs. It is particularly useful for large datasets or models with singular or nearly singular Hessian matrices.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 4.4 Iterative Reweighted Least Squares
 
