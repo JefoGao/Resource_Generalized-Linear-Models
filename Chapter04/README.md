@@ -29,11 +29,11 @@ Where are the $\beta$'s here?
 - They are hidden in the $\theta$, the natural parameter, since it is a function of the mean $\mu$, which is in itself a function of the $\beta$'s.
   - Remember that $g(\mu)=\eta=\beta^Tx$, so if we take the inverse function we get: $\mu=g^{-1}(\beta^Tx)$, $which is some function of $\beta$ (i.e., we could denote it as $\mu=h(\beta)$)
 - So, $\theta(\mu)$, and $\mu(\beta)$, or $\theta(\mu(\beta))$
-•
-To do maximum-likelihood we have to differentiate w.r.t. . We will use the chain rule here.
-For simplicity we will look at a single observation, which will also mean .
-To get the full derivative we just have to take a sum over the observations
-○
-•
-Also we will look only on a single coefficient, e.g.,
-Later we will write this in vector form
+
+To do maximum-likelihood we have to differentiate w.r.t. $\beta$. We will use the chain rule here.
+- For simplicity we will look at a single observation, $(x_i, y_i)$, which will also mean $\ell_i, \theta_i, \mu_i, \eta_i$.
+  - To get the full derivative we just have to take a sum over the observations
+- Also we will look only on a single coefficient, e.g., $\beta_j$
+  - Later we will write this in vector form
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\textcolor{magenta}{\frac{\partial\ell_i}{\partial\theta_i}}\textcolor{}{\frac{\partial}{\partial}}\textcolor{}{\frac{\partial}{\partial}}\textcolor{}{\frac{\partial}{\partial}}$$
