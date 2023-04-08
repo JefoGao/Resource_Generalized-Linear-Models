@@ -1,5 +1,9 @@
 # 1 Introduction to Generalized Linear Models
 
+|Table of Sections|
+|--|
+|[:herb: 1.1 Linear Models Vs. Generalized Linear Models](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#herb-11-linear-models-vs-generalized-linear-models)<br>+-- [:apple: 1.1.1 Linear Models](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-111-linear-models)<br>+-- [:apple: 1.1.2 Generalized Linear Models](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-112-generalized-linear-models)<br>[:herb: 1.2 Least Squares Vs. Maximum Likelihood](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#herb-12-least-squares-vs-maximum-likelihood)<br>+-- [:apple: 1.2.1 Least Squares](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-121-least-squares)<br>+-- [:apple: 1.2.2 Maximum Likelihood](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-122-maximum-likelihood)<br>[:herb: 1.3 Saturated Vs. Constrained Models](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#herb-13-saturated-vs-constrained-models)<br>[:herb: 1.4 Link Functions](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#herb-14-link-functions)<br>+-- [:apple: 1.4.1 Why Use Link Functions?](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-141-why-use-link-functions)<br>+-- [:apple: 1.4.2 Invertibility](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-142-invertibility)<br>+-- [:apple: 1.4.3 Canonical Link Function](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-143-canonical-link-function)<br>+-- [:apple: 1.4.4 What Isn'T A Link Function?](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter01/README.md#apple-144-what-isnt-a-link-function)|
+
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 1.1 Linear Models vs. Generalized Linear Models
@@ -12,7 +16,7 @@
 - Coefficients are linear
 - Predictor variables can be transformed, but coefficients must be linear
 
-### :apple: 1.1.2 Generalized Linear Models:
+### :apple: 1.1.2 Generalized Linear Models
 Takes linear models and generalizes it by:
   1. Allowing $y$'s to come from any exponential family distribution
   2. Allowing means $\mu$ to be related to predictor variables $x_i$ by some function of $\mu$: $g(\mu_i) = x_i^T \beta$
