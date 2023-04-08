@@ -94,3 +94,7 @@ Which also means that $\mathbb{E}[d]=a(\phi)$
 The total deviance is simply the sum of the unit deviance for all the observations in our data:
 
 $$D=\sum_{i=1}^n d(y_i, \mu_i), \qquad \frac{D}{a(\phi)}\sim\chi_n^2$$
+
+$\frac{D}{a(\phi)}$ is also called the scaled total deviance.
+
+Notice that $\frac{D}{a(\phi)}$ is equal to: $2(\ell(y,y)-\ell(y,\mu))$
