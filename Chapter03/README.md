@@ -1,5 +1,9 @@
 # 3 Deviance
 
+|Table of Sections|
+|--|
+|[:herb: 3.1 Unit Deviance](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-31-unit-deviance)<br>[:herb: 3.2 Examples Of The Unit Deviance](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-32-examples-of-the-unit-deviance)<br>+-- [:apple: 3.2.1 Poisson](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#apple-321-poisson)<br>+-- [:apple: 3.2.2 Normal](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#apple-322-normal)<br>[:herb: 3.3 Measure Of Similarity](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-33-measure-of-similarity)<br>[:herb: 3.4 The Distribution Of The Unit Deviance](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-34-the-distribution-of-the-unit-deviance)<br>[:herb: 3.5 Total Deviance](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-35-total-deviance)<br>[:herb: 3.6 Null And Residual Deviance](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter03/README.md#herb-36-null-and-residual-deviance)|
+
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 3.1 Unit Deviance
