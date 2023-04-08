@@ -97,4 +97,16 @@ $$D=\sum_{i=1}^n d(y_i, \mu_i), \qquad \frac{D}{a(\phi)}\sim\chi_n^2$$
 
 $\frac{D}{a(\phi)}$ is also called the scaled total deviance.
 
-Notice that $\frac{D}{a(\phi)}$ is equal to: $2(\ell(y,y)-\ell(y,\mu))$
+Notice that $\frac{D}{a(\phi)}$ is equal to: $2(\ell(y,y)-\ell(y,\mu))$.
+
+That is - it's ($2\times$)the log-likelihood of the *saturated model*, where we take $\mu=y$, minus the non-saturated / constrained model.
+
+This is easy to show with exponential family representation, as
+
+$$
+\begin{aligned}
+&\ell(y,\mu)=\sum_{i=1}^n\frac{1}{a(\phi)}t(y_i,\mu_i)+c(y_i,\phi)\\
+&\ell(y,y)=\sum_{i=1}^n\frac{1}{a(\phi)}t(y_i,y_i)+c(y_i,\phi)\\
+&2(\ell(y,y)-\ell(y,\mu)) = sum_{i=1}^n\frac{2}{a(\phi)}[t(y_i,y_i)-t(y_i,\mu_i)] = \frac{D}{a(\phi)}
+\end{aligned}
+$$
