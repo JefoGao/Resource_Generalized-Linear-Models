@@ -36,4 +36,4 @@ To do maximum-likelihood we have to differentiate w.r.t. $\beta$. We will use th
 - Also we will look only on a single coefficient, e.g., $\beta_j$
   - Later we will write this in vector form
 
-$$\frac{\partial\ell_i}{\partial\beta_j}=\textcolor{magenta}{\frac{\partial\ell_i}{\partial\theta_i}}\textcolor{}{\frac{\partial}{\partial}}\textcolor{}{\frac{\partial}{\partial}}\textcolor{}{\frac{\partial}{\partial}}$$
+$$\frac{\partial\ell_i}{\partial\beta_j}=\textcolor{magenta}{\frac{\partial\ell_i}{\partial\theta_i}}\textcolor{orange}{\frac{\partial\theta_i}{\partial\mu_i}}\textcolor{lime}{\frac{\partial\mu_i}{\partial\eta_i}}\textcolor{cyan}{\frac{\partial\eta_i}{\partial\beta_j}}$$
