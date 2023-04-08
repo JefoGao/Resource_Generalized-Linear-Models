@@ -207,3 +207,39 @@ However, it also has some disadvantages:
 
 Overall, the Fisher Scoring algorithm is a useful alternative to the Newton-Raphson method for estimating maximum likelihood parameters in GLMs. It is particularly useful for large datasets or models with singular or nearly singular Hessian matrices.
 
+## :herb: 4.4 Iterative Reweighted Least Squares (IRLS)
+
+Iterative Reweighted Least Squares (IRLS) is another algorithm used to estimate the maximum likelihood estimates in generalized linear models (GLMs). IRLS is a gradient descent algorithm that iteratively computes the weights for each observation and updates the estimates of the coefficients until convergence is achieved.
+
+### :apple: 4.4.1 Algorithm
+
+The steps for IRLS are as follows:
+
+1. Initialize the coefficients $\beta$ (e.g., using maximum likelihood estimates from the saturated model or the method of moments)
+2. Compute the fitted values $\hat{y}$ using the current coefficients $\beta$
+3. Compute the working response $z$ as $z = X\beta + \frac{y-\hat{y}}{g'(\hat{y})}$ where $g'$ is the first derivative of the link function
+4. Compute the weights $w$ as $w = \frac{1}{\text{var}(y_i)} = \frac{1}{\text{var}(g^{-1}(\mu_i))} = \frac{1}{g''(\mu_i) \cdot V(\mu_i)}$ where $V(\mu_i)$ is the variance function of the distribution and $g''$ is the second derivative of the link function
+5. Compute the weighted least squares estimate of the coefficients $\beta$ as $\beta_{new} = (X^TWX)^{-1}X^TWz$
+6. If the difference between the current and updated coefficients is smaller than a specified tolerance, stop. Otherwise, go back to step 2.
+
+### :apple: 4.4.2 Intuition
+
+The intuition behind IRLS is that it is a weighted least squares algorithm, where the weights are chosen to reflect the variance of each observation. In particular, observations with smaller variance are given more weight in the computation of the updated estimates of the coefficients. This means that IRLS gives more weight to observations that are more informative, and less weight to observations that are noisy or less informative.
+
+The working response $z$ is used to adjust for the discrepancy between the observed response $y$ and the fitted values $\hat{y}$, and to weight the observations according to their variance. The weights are used to down-weight observations with high variance, which can cause the estimates of the coefficients to be biased.
+
+### :apple: 4.4.3 Advantages and Disadvantages
+
+The advantages of IRLS are:
+
+- It can handle a wide range of distribution families, including non-normal distributions
+- It is computationally efficient and scales well to large datasets
+- It can handle missing data by using only the available data to update the estimates of the coefficients
+
+The disadvantages of IRLS are:
+
+- It can be sensitive to the initial values of the coefficients, and may converge to local optima
+- It may not converge for some datasets, particularly those with a large number of outliers or influential observations
+- It can be difficult to diagnose convergence problems or assess the quality of the estimates
+
+In summary, IRLS is a popular algorithm for estimating the maximum likelihood estimates in GLMs, particularly for models with non-normal distributions or missing data. It is a computationally efficient algorithm that iteratively updates the estimates of the coefficients using a weighted least squares approach. However, it can be sensitive to the initial values of the coefficients and may not converge for some datasets.
