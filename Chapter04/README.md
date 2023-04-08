@@ -150,3 +150,20 @@ $$\frac{\partial\ell}{\partial\beta_j}=\frac{1}{a(\phi)}X^T(y-\mu)=X^T(y-e^{X\be
 Where $e^{X\beta}$ is taking the element-wise exponent of each element in the $X\beta$ vector.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
+## :herb: 4.2 Newton Raphson
+
+Newton Raphson is an iterative algorithm for finding the maximum likelihood estimation of the parameters in a generalized linear model (GLM). The basic idea is to start with some initial guess for the parameters and then iteratively update the estimates until convergence.
+
+The algorithm works as follows:
+
+1. Choose some initial values for the parameters, denoted by $\beta^{(0)}$.
+2. For each observation $i$ in the data set, compute the predicted mean $\mu_i$ using the current parameter estimates: $\mu_i = g^{-1}(x_i^T\beta^{(t)})$, where $g$ is the link function.
+3. Compute the working response $z_i$ for each observation: $z_i = x_i^T\beta^{(t)} + (y_i - \mu_i) g'(\mu_i)$.
+4. Compute the working weights $w_i$ for each observation: $w_i = \frac{1}{\text{var}(\mu_i)}$ where $\text{var}(\mu_i)$ is the variance function corresponding to the distribution in the GLM.
+5. Update the parameter estimates using the formula: $\beta^{(t+1)} = (\mathbf{X}^TW^{(t)}\mathbf{X})^{-1}\mathbf{X}^TW^{(t)}\mathbf{z}^{(t)}$, where $\mathbf{X}$ is the design matrix, $\mathbf{W}$ is the diagonal matrix of working weights, and $\mathbf{z}^{(t)}$ is the vector of working responses computed in step 3.
+6. Repeat steps 2-5 until convergence, which can be determined by checking if the change in the parameter estimates between iterations is small.
+
+One advantage of the Newton Raphson algorithm is that it converges faster than other optimization algorithms, such as gradient descent. However, it can be sensitive to the initial values of the parameters and may not converge if the starting values are too far from the true parameter values.
+
+In summary, Newton Raphson is an iterative algorithm for finding the maximum likelihood estimates of the parameters in a GLM. It works by iteratively updating the parameter estimates based on the predicted means and working responses computed for each observation in the data set. While it can converge faster than other optimization algorithms, it can be sensitive to the initial parameter values and may not converge if the starting values are too far from the true values.
