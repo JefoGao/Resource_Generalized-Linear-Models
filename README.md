@@ -1,5 +1,7 @@
 # 0 GENERALIZED LINEAR MODELS
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 0.1 Regression
 
 Regression is a way to relate explanatory variables (x's) to some response variable of interest (y). There are two broad types of regression:
@@ -26,6 +28,8 @@ Inference is used to understand how a predictor `$x$` influences an outcome/resp
 #### :bread: 0.1.3.2 Prediction
 Prediction is used to predict `$y$` for a new `$x$`, and to do so well enough. Here we don’t care so much about interpretation – just use whatever you have that gives good predictions (not just on the current data, but to future data as well). The model should generalize well and not over-fit the data.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 0.2 GLMs
 
 - GLMs are an extension to Linear Models (LMs).
@@ -39,6 +43,8 @@ Prediction is used to predict `$y$` for a new `$x$`, and to do so well enough. H
 - GLMs work on any distribution from the Exponential Family.
 - Available software packages use the IRLS method to fit GLMs numerically.
 - R implementation is limited to commonly used distributions, but external packages offer additional GLMs.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.3 Linear Models
 
@@ -69,6 +75,8 @@ So there are a few major assumptions to conduct a LM analysis:
 For assumption 2 to be stronger: not only constant variance, but also the shape of the distribution is Normal
 
 $$ y_i \sim N(\mathbb{E}[y_i],\mathbb{V}[y_i])=N(\mu_i, \sigma^2) $$
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.4 Finding the Coefficients – Least Squares
 
@@ -110,6 +118,8 @@ $$
 
 This last equation is called the “Normal Equations”. We assume here $X^{\mathrm{T}}X$ is invertible, but it’s almost always the case for a design matrix with more rows (observations) than columns (predictors) [also assuming no perfect linear dependence exists between predictors]. This is the solution to “Ordinary Least Squares” (OLS).
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 0.5 Weights
 
 We can also incorporate weights into the analysis. There are different reasons why we might choose to give more weight to certain observations over other observations. This in turn will pull the regression line to be closer to the observations with more weights. 
@@ -123,6 +133,8 @@ $$\hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n w_ie_i^2 = \arg\min_{\beta} (y-X\b
 And the solution would become:
 
 $$\hat{\beta} = (X^T W X)^{-1}X^T W y$$
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.6 Estimating $σ^2$
 
@@ -144,12 +156,16 @@ $$ s^2=\frac{\text{RSS}}{n-(p+1)} $$
 
 By dividing by $n-(p+1)$ instead of $n$, we are accounting for the fact that the estimated coefficients use up $p+1$ degrees of freedom, leaving only $n-(p+1)$ degrees of freedom to estimate $\sigma^2$. The formula also takes into account the fact that the estimator uses information from the data to estimate $\sigma^2$, which can lead to bias if not properly accounted for. The squared-root of it is also called the “Residual Standard Error”.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 0.7 Maximum Likelihood
 If we assumed the normal distribution on $y$, we could have also used Maximum Likelihood instead of Least-Squares to find $\beta$ and $\sigma$. As shown in the 2nd intro video, in the case of the normal distribution – both methods are equivalent, and actually compute the same thing: 
 
 The MLE for $\beta$ comes out $=(X^TX)^{-1}X^Ty$
 
 The MLE for $\sigma^2$ comes out $= \frac{RSS}{n}$ (the biased estimator we found).
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.8 Variance of Fitted Coefficients
 After fitting the beta coefficients using the data, we can check what is the variability of the coefficients:
@@ -170,6 +186,8 @@ $$
 We have used the homoscedasticity assumption for $Var[y] = \sigma^2\cdot I$ where $I$ is the $(n,n)$ identity matrix. We also used the fact that $(A^{-1})^{T} = (A^T)^{-1}$. We usually also replace $\sigma^2$ with its estimation to get an estimate for the variance of the coefficients.
 
 Once we have the variance of the coefficients, we can build confidence intervals on them or conduct hypothesis testing (either using the normal distributional assumption, or asymptotic theory).
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.9 Inference on $\beta$
 
@@ -208,6 +226,8 @@ $$ \hat{\beta_j} \pm t_{\alpha/2,n-p-1} \sqrt{\hat{Var}(\hat{\beta_j})} \quad \t
 
 where $t_{\alpha/2,n-p-1}$ refers to the $\alpha/2$ quantile of the $t_{n-p-1}$ distribution. 
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 0.10 Uncertainty of Prediction
 
 We can also get the uncertainty over a prediction. Suppose we have a new observation $x_* $, then the regression line prediction is:
@@ -230,6 +250,8 @@ Here too, if we use the normality assumption, or asymptotic theory for large eno
 $$\mu^* \pm Z_{\alpha/2} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is known)} $$
 
 $$\mu^* \pm t_{\alpha/2, n-p-1} \sqrt{\mathbb{V}[\mu^* ]} \quad \text{(when } \sigma^2 \text{ is estimated)} $$
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 0.11 How good is our model? R2, F test and AIC/BIC
 
