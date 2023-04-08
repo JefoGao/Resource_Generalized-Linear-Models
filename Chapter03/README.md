@@ -12,4 +12,14 @@ We are going to denote $t(y,\mu)=\textcolor{orange}{y\cdot\theta-b(\theta)}$
 
 We want to find the maximum of this function w.r.t $\mu$. If we differentiate $t$ w.r.t $\mu$, we will get (using the chain rule on the 2nd term):
 
-$$\frac{\partial t}{\partial\mu}=y\cdot\frac{\partial\theta}{\partial\mu}-\frac{\partial b(\theta)}{\partial\theta}\cdot\frac{\partial\theta}{\partial\mu}$$
+$$\frac{\partial t}{\partial\mu}=y\cdot\frac{\partial\theta}{\partial\mu} - \frac{\partial b(\theta)}{\partial\theta}\cdot\frac{\partial\theta}{\partial\mu}$$
+
+Remember from the last chapter that $\frac{\partial\mu}{\partial\theta}=V(\mu)$, hence $\frac{\partial\theta}{\partial\mu}=\frac{1}{V(\mu)}$.
+
+Finally we get: 
+
+$$\frac{\partial t}{\partial\mu}=\frac{y}{V(\mu)}-\frac{\mu}{V(\mu)}=\frac{y-\mu}{V(\mu)}$$
+
+Equating to 0, we get that $\mu=y$. If we keep to do 2nd derivative (although complicated to compute), it shows that this is indeed a maximum.
+
+So, setting $\mu=y$, we get that $t(y,y)$ is the maximum w.r.t. $\mu$ (for any value of $y$), and if $\mu$ changes, the function value goes down.
