@@ -12,3 +12,4 @@ We are going to denote $t(y,\mu)=\textcolor{orange}{y\cdot\theta-b(\theta)}$
 
 We want to find the maximum of this function w.r.t $\mu$. If we differentiate $t$ w.r.t $\mu$, we will get (using the chain rule on the 2nd term):
 
+$$\frac{\partial t}{\partial\mu}=y\cdot\frac{\partial\theta}{\partial\mu}-\frac{\partial b(\theta)}{\partial\theta}\cdot\frac{\partial\theta}{\partial\mu}$$
