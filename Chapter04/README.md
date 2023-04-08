@@ -134,3 +134,15 @@ Mainly for practice, let's remember what are the different terms in the general 
 - $\theta_i=\ln\lambda_i\Rightarrow\lambda_i=e^{\theta_i}$
 - $b(\theta_i)=e^{\theta_i}\Rightarrow b'(\theta_i)=e^{\theta_i}$
 - $c(y_i,\phi)=-\ln y_i!$
+
+Suppose we take the canonical link function, meaning that $\theta_i=\eta_i=\beta^Tx_i$
+
+$$\ell=\sum_{i=1}^n y_i\ln\lambda_i-\lambda_i-\ln y_i!$$
+
+$$\frac{\partial\ell}{\partial\beta_j}=\sum_{i=1}^n\frac{y_i-b'(\theta)}{a(\phi)}\cdot x_{ij}=\sum_{i=1}^n\frac{y_i-e^{\theta_i}}{1}\cdot x_{ij}=\sum_{i=1}^n(y_i-e^{\theta_i})\cdot x_{ij}$$
+
+Or in vector form:
+
+$$\frac{\partial\ell}{\partial\beta_j}=\frac{1}{a(\phi)}X^T(y-\mu)=X^T(y-e^{X\beta})$$
+
+Where $e^{x\beta}$ is taking the element-wise exponent of each element in the $x\beta$ vector.
