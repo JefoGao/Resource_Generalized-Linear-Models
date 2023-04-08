@@ -38,6 +38,8 @@ So the unit deviance is small when $\mu=y$, and it grows when \mu is far from $y
 
 $$
 \begin{aligned}
-p(Y=y)=\exp[y\cdot\ln\lambda - \lambda - \ln y!]
+&p(Y=y)=\exp[y\cdot\ln\lambda - \lambda - \ln y!] \\
+&t(y,\mu) = t(y,\lambda) = [y\cdot\ln\lambda - \lambda - \ln y!] \\
+&d(y,\mu) = 2[(y\cdot\ln y - \lambda - \ln y!) - (y\cdot\ln\lambda - \lambda - \ln y!)] = 2[y\cdot\ln\frac{y}{\lambda}-(y-\lambda)]
 \end{aligned}
 $$
