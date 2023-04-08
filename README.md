@@ -1,3 +1,10 @@
+---
+title: Introduction to Generalized Linear Models
+author: Meerkat Statistics
+collector: Jefo Gao
+date: 07 Apr 2023
+---
+
 # 0 GENERALIZED LINEAR MODELS
 
 |Table of Sections|
