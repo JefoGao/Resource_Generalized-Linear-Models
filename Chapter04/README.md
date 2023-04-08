@@ -187,7 +187,7 @@ The Fisher Scoring algorithm iteratively updates the parameter estimates as foll
 3. Calculate the Fisher information matrix $\mathbf{F}(\boldsymbol{\theta})$.
 4. Update the parameter vector:
 
-   $$\boldsymbol{\theta}_{new} = \boldsymbol{\theta}_{old} + \left[ \mathbf{F}(\boldsymbol{\theta}_{old}) \right]^{-1} \mathbf{U}(\boldsymbol{\theta}_{old})$$
+$$\boldsymbol{\theta}_{new} = \boldsymbol{\theta}_{old} + \left[ \mathbf{F}(\boldsymbol{\theta}_{old}) \right]^{-1} \mathbf{U}(\boldsymbol{\theta}_{old})$$
 
 5. Repeat steps 2-4 until convergence.
 
