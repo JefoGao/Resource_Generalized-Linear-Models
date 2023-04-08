@@ -1,5 +1,9 @@
 # 4 Likelihood Analysis
 
+|Table of Sections|
+|--|
+|[:herb: 4.1 Likelihood Analysis](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#herb-41-likelihood-analysis)<br>+-- [:apple: 4.1.1 General Analysis](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-411-general-analysis)<br>+-- [:apple: 4.1.2 Canonical Link Function](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-412-canonical-link-function)<br>+-- [:apple: 4.1.3 Full Derivative And Vector Notation](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-413-full-derivative-and-vector-notation)<br>+-- [:apple: 4.1.4 Poisson Example](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-414-poisson-example)<br>[:herb: 4.2 Newton Raphson](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#herb-42-newton-raphson)<br>[:herb: 4.3 Fisher Scoring](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#herb-43-fisher-scoring)<br>+-- [:apple: 4.3.1 The Fisher Information Matrix](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-431-the-fisher-information-matrix)<br>+-- [:apple: 4.3.2 Fisher Scoring Algorithm](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-432-fisher-scoring-algorithm)<br>+-- [:apple: 4.3.3 Advantages And Disadvantages](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-433-advantages-and-disadvantages)<br>[:herb: 4.4 Iterative Reweighted Least Squares](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#herb-44-iterative-reweighted-least-squares)<br>+-- [:apple: 4.4.1 Algorithm](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-441-algorithm)<br>+-- [:apple: 4.4.2 Intuition](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-442-intuition)<br>+-- [:apple: 4.4.3 Advantages And Disadvantages](https://github.com/bosoninfo/Resource_Generalized-Linear-Models/blob/main/Chapter04/README.md#apple-443-advantages-and-disadvantages)|
+
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 4.1 Likelihood Analysis
@@ -207,7 +211,7 @@ However, it also has some disadvantages:
 
 Overall, the Fisher Scoring algorithm is a useful alternative to the Newton-Raphson method for estimating maximum likelihood parameters in GLMs. It is particularly useful for large datasets or models with singular or nearly singular Hessian matrices.
 
-## :herb: 4.4 Iterative Reweighted Least Squares (IRLS)
+## :herb: 4.4 Iterative Reweighted Least Squares
 
 Iterative Reweighted Least Squares (IRLS) is another algorithm used to estimate the maximum likelihood estimates in generalized linear models (GLMs). IRLS is a gradient descent algorithm that iteratively computes the weights for each observation and updates the estimates of the coefficients until convergence is achieved.
 
