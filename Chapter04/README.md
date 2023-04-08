@@ -74,3 +74,26 @@ If we choose the canonical link function, that is, if we set $\theta=\eta=\beta^
 If $\theta=\eta$, then the middle terms here cancel out:
 
 $$\frac{\partial\ell_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\frac{\partial\theta_i}{\partial\mu_i}\frac{\partial\mu_i}{\partial\eta_i}\frac{\partial\eta_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\textcolor{orange}{\frac{\partial\theta_i}{\partial\mu_i}\frac{\partial\mu_i}{\partial\theta_i}}\frac{\partial\eta_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\frac{\partial\eta_i}{\partial\beta_j}$$
+
+So we would get that:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\frac{y_i-b'(\theta)}{a(\phi)}\cdot x_{ij}$$
+
+So we see the equation simplified a lot.
+
+### :apple: 4.1.3 Full derivative and vector notation
+This was for a single observation. The full derivative over all our dataset will be a sum over the observations. That is:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\sum_{i=1}^n\frac{y_i-b'(\theta)}{a(\phi)}\cdot\frac{1}{V(\mu_i)}\cdot\frac{\partial\mu_i}{\partial\eta_i}\cdot x_{ij}$$
+
+For the canonical link function we will have:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\sum_{i=1}^n\frac{y_i-b'(\theta)}{a(\phi)}\cdot x_{ij}$$
+
+To move to vector form and take the derivative w.r.t. the full vector of coefficients $\beta$, the only thing that will be different for the single observation is that $x$ becomes a vector, i.e., we will have:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\frac{y_i-b'(\theta)}{a(\phi)}\cdot\frac{1}{V(\mu_i)}\cdot\frac{\partial\mu_i}{\partial\eta_i}\cdot x_i$$
+
+Where $x_i$ is a vector of length $p$ (an intercept and $p-1$ covariates) for the $i$'th observation.
+
+To move to the full data derivative, we can take advantage of matrix operations and write everything in matrix form.
