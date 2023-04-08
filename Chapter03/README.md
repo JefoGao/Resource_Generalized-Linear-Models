@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
-## 3.1 :herb: Unit Deviance
+## :herb: 3.1 :herb: Unit Deviance
 
 The deviance is a generalization of residuals in OLS. In regular regression (Linear Model) we use the residuals, but in GLM the deviance replaces some of the functions residuals have in LM. Remember the PDF/PMF of expo. family:
 
@@ -33,13 +33,23 @@ Since the 1st term is the maximum, this quantity is always non-negative.
 
 So the unit deviance is small when $\mu=y$, and it grows when \mu is far from $y$ - just like regular residuals.
 
-## 3.2 Examples of the unit deviance
-### 3.2.1 Poisson
+## :herb: 3.2 Examples of the unit deviance
+### :apple: 3.2.1 Poisson
 
 $$
 \begin{aligned}
 &p(Y=y)=\exp[y\cdot\ln\lambda - \lambda - \ln y!] \\
 &t(y,\mu) = t(y,\lambda) = [y\cdot\ln\lambda - \lambda - \ln y!] \\
 &d(y,\mu) = 2[(y\cdot\ln y - \lambda - \ln y!) - (y\cdot\ln\lambda - \lambda - \ln y!)] = 2[y\cdot\ln\frac{y}{\lambda}-(y-\lambda)]
+\end{aligned}
+$$
+
+### :apple: 3.2.2 Normal
+
+$$
+\begin{aligned}
+&f_Y(y)=\exp[\frac{1}{\sigma^2}(y\cdot\mu-\frac{\mu^2}{2})-\frac{y^2}{2\sigma^2}-\ln\sqrt{2\pi}\sigma] \\
+&t(y,\mu) = y\cdot\mu-\frac{\mu^2}{2} \\
+&d(y,\mu) = 2[(y\cdot y-\frac{y^2}{2}) - (y\cdot\mu-\frac{\mu^2}{2})] = y^2 - 2y\mu+\mu^2=(y-\mu)^2
 \end{aligned}
 $$
