@@ -3,6 +3,7 @@ title: Introduction to Generalized Linear Models
 author: Meerkat Statistics
 collector: Jefo Gao
 date: 07 Apr 2023
+resource url: https://www.youtube.com/playlist?list=PLJ71tqAZr197DkSiGT7DD9dMYxkyZX0ti
 ---
 
 # 0 GENERALIZED LINEAR MODELS
