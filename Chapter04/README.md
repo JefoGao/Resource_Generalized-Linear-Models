@@ -97,3 +97,22 @@ $$\frac{\partial\ell_i}{\partial\beta_j}=\frac{y_i-b'(\theta)}{a(\phi)}\cdot\fra
 Where $x_i$ is a vector of length $p$ (an intercept and $p-1$ covariates) for the $i$'th observation.
 
 To move to the full data derivative, we can take advantage of matrix operations and write everything in matrix form.
+- We will create 2 diagonal $(n\times n)$ matrices:
+
+$$V=diag(V(\mu_1),\cdots,V(\mu_n))=\begin{bmatrix}V(\mu_1)&\dots&0\\ 
+\vdots&\ddots&\vdots\\ 
+0&\dots&V(\mu_n)\end{bmatrix}$$
+
+$$D=diag(\frac{\partial\mu_1}{\partial\eta_1},\cdots,\frac{\partial\mu_n}{\partial\eta_n})=\begin{bmatrix} \frac{\partial\mu_1}{\partial\eta_1} &\dots&0\\ 
+\vdots&\ddots&\vdots\\ 
+0&\dots&\frac{\partial\mu_n}{\partial\eta_n}\end{bmatrix}$$
+
+- We will denote $X$ by the design matrix which is of $(n\times n)$ shape
+- We will denote $y$ by the $(n\times 1)$ vector of different responses
+- We will denote $\mu$ by the $(n\times 1)$ vector of different means
+
+And we will get:
+
+$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}X^TV^{-1}D(y-\mu) \qquad \text{(for column vector)}$$
+
+$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}(y-\mu)^TV^{-1}DX) \qquad \text{(for row vector)}$$
