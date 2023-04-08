@@ -115,4 +115,16 @@ And we will get:
 
 $$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}X^TV^{-1}D(y-\mu) \qquad \text{(for column vector)}$$
 
-$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}(y-\mu)^TV^{-1}DX) \qquad \text{(for row vector)}$$
+$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}(y-\mu)^TV^{-1}DX \qquad \text{(for row vector)}$$
+
+For the canonical link function, the middle terms $(V^{-1}D)$ cancel out:
+
+$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}X^T(y-\mu) \qquad \text{(for column vector)}$$
+
+$$\frac{\partial\ell}{\partial\beta}=\frac{1}{a(\phi)}(y-\mu)^TX \qquad \text{(for row vector)}$$
+
+### :apple: 4.1.4 Poisson Example
+
+$$y_i\sim Poisson(\lambda_i)$$
+
+$$f_Y(y_i)=\frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}=\exp[y_i\ln\lambda_i-\lambda_i-\ln y_i!]$$
