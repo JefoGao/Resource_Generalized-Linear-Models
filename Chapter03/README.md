@@ -23,3 +23,21 @@ $$\frac{\partial t}{\partial\mu}=\frac{y}{V(\mu)}-\frac{\mu}{V(\mu)}=\frac{y-\mu
 Equating to 0, we get that $\mu=y$. If we keep to do 2nd derivative (although complicated to compute), it shows that this is indeed a maximum.
 
 So, setting $\mu=y$, we get that $t(y,y)$ is the maximum w.r.t. $\mu$ (for any value of $y$), and if $\mu$ changes, the function value goes down.
+
+***:sparkles: Definition :sparkles:***
+The unit deviance is defined to be:
+
+$$d(y,\mu)=2(t(y,y)-t(y,\mu))$$
+
+Since the 1st term is the maximum, this quantity is always non-negative.
+
+So the unit deviance is small when $\mu=y$, and it grows when \mu is far from $y$ - just like regular residuals.
+
+## 3.2 Examples of the unit deviance
+### 3.2.1 Poisson
+
+$$
+\begin{aligned}
+p(Y=y)=\exp[y\cdot\ln\lambda - \lambda - \ln y!]
+\end{aligned}
+$$
