@@ -48,3 +48,5 @@ $$
 &\textcolor{cyan}{\frac{\partial\eta_i}{\partial\beta_j}}=\frac{\partial(\beta^Tx_i)}{\partial\beta_j}=x_{ij}
 \end{aligned}
 $$
+
+For $\textcolor{orange}{\frac{\partial\theta_i}{\partial\mu_i}}$, let's 1st look at the inverse. Remember from previous chapter about the mean and variance of exponential family that $\frac{\partial\mu}{\partial\theta}=V(\mu)$, i.e., that it's equal to the variance function. So, $\frac{\partial\theta_i}{\partial\mu_i}=\frac{1}{V(\mu_i)}$.
