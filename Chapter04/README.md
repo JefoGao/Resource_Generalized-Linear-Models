@@ -1,5 +1,7 @@
 # 4 Likelihood Analysis
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 # :herb: 4.1 Likelihood Analysis
 
 We want to find the coefficients of our model, that is, the $\beta$'s that relate our predictors / covariates to the response:
@@ -146,3 +148,5 @@ Or in vector form:
 $$\frac{\partial\ell}{\partial\beta_j}=\frac{1}{a(\phi)}X^T(y-\mu)=X^T(y-e^{X\beta})$$
 
 Where $e^{X\beta}$ is taking the element-wise exponent of each element in the $X\beta$ vector.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
