@@ -72,7 +72,7 @@ $$
 \mathcal{L} = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2}
 $$
 
-- The $arg max$ is the same for the likelihood or the log-likelihood, so easier to take the log and turn the product into a sum; Continuing:
+- The $\arg\max$ is the same for the likelihood or the log-likelihood, so easier to take the log and turn the product into a sum; Continuing:
 
 $$
 \begin{aligned}
@@ -86,18 +86,18 @@ $$
 
 $$
 \begin{aligned}
-arg \max_{\beta} \ell &= arg \max_{\beta} - \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] \\
-&= arg \min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
+\arg\max_{\beta} \ell &= \arg\max_{\beta} - \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] \\
+&= \arg\min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2]
 \end{aligned}
 $$
 
   - Maximizing a negative quantity is the same as minimizing the positive quantity
 
 $$
-arg \min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = arg min_{\beta} \sum_{i=1}^n (y_i - \beta^Tx_i)^2
+\arg\min_{\beta} \sum_{i=1}^n [\frac{1}{2\sigma^2}(y_i - \beta^T x_i)^2] = \arg\min_{\beta} \sum_{i=1}^n (y_i - \beta^Tx_i)^2
 $$
 
-  - Again, we see a multiplying constant $\frac{1}{2\sigma^2}$ that doesn't affect the arg min.
+  - Again, we see a multiplying constant $\frac{1}{2\sigma^2}$ that doesn't affect the $\arg\min$.
 
 We see that for the normal distribution, the least squares and the maximum likelihood methods are actually equivalent - we are doing exactly the same.
 
