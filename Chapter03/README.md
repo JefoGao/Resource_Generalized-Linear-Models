@@ -33,6 +33,8 @@ Since the 1st term is the maximum, this quantity is always non-negative.
 
 So the unit deviance is small when $\mu=y$, and it grows when \mu is far from $y$ - just like regular residuals.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 3.2 Examples of the unit deviance
 ### :apple: 3.2.1 Poisson
 
@@ -56,6 +58,8 @@ $$
 
 Here it comes out that the unit deviance is equal to the squared residual in the Linear-Model. But for other distributions this is not the case.
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 3.3 Measure of Similarity
 
 Note that the unit deviance is not symmetric, i.e., it's not a proper distance metric, but it is a measure of similarity/dis-similarity:
@@ -63,6 +67,8 @@ Note that the unit deviance is not symmetric, i.e., it's not a proper distance m
 |![image](https://user-images.githubusercontent.com/19381768/230702439-59f3b1bf-6ee7-43b9-84e9-eba7c472ab02.png)|
 |:--:|
 |Unit deviance of different GLMs|
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 3.4 The distribution of the unit deviance
 
@@ -89,6 +95,8 @@ $$\frac{d(y,\mu)}{a(\phi)}\sim \chi_1^2$$
 
 Which also means that $\mathbb{E}[d]=a(\phi)$
 
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
+
 ## :herb: 3.5 Total Deviance
 
 The total deviance is simply the sum of the unit deviance for all the observations in our data:
@@ -110,6 +118,8 @@ $$
 &2(\ell(y,y)-\ell(y,\mu)) = sum_{i=1}^n\frac{2}{a(\phi)}[t(y_i,y_i)-t(y_i,\mu_i)] = \frac{D}{a(\phi)}
 \end{aligned}
 $$
+
+<p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
 ## :herb: 3.6 Null and Residual Deviance
 
