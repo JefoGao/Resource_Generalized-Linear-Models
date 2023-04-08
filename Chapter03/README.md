@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/19381768/230614263-feff794c-64ca-404b-9e44-849eaebc22fd.png" width=50%/></p>
 
-## :herb: 3.1 :herb: Unit Deviance
+## :herb: 3.1 Unit Deviance
 
 The deviance is a generalization of residuals in OLS. In regular regression (Linear Model) we use the residuals, but in GLM the deviance replaces some of the functions residuals have in LM. Remember the PDF/PMF of expo. family:
 
@@ -110,3 +110,13 @@ $$
 &2(\ell(y,y)-\ell(y,\mu)) = sum_{i=1}^n\frac{2}{a(\phi)}[t(y_i,y_i)-t(y_i,\mu_i)] = \frac{D}{a(\phi)}
 \end{aligned}
 $$
+
+## :herb: 3.6 Null and Residual Deviance
+
+These are the Total Deviance, calculated with regards to different fitted models:
+- We fit this model using GLM, and then calculate $D=\Sigma_{i=1}^n d(y_i, \hat{mu_i})$, where $\hat{\mu}$ is the predicted mean value from the model.
+- The null deviance is calculated with regards to the null model: $g(\mu)=\beta_0$, that is a model that only includes an intercept.
+- The residual deviance is calculated with regards to any model we wish to test, i.e.,
+  - $g(\mu)=\beta^Tx$
+
+The residual deviance is analogous to the Residual-Sum-of-Squares (RSS). And it actually is equal to it for the normal distribution (but not in other distributions). So we can now have some measure of the Goodness-of-Fit of our model to the data. The Null/Residual deviance still distribute $\chi^2$.
