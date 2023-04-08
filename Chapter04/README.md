@@ -60,3 +60,17 @@ For $\textcolor{lime}{\frac{\partial\mu_i}{\partial\eta_i}}$.
 Putting everything together, we get:
 
 $$\frac{\partial\ell_i}{\partial\beta_j}=\frac{y_i-b'(\theta)}{a(\phi)}\cdot\frac{1}{V(\mu_i)}\cdot\frac{\partial\mu_i}{\partial\eta_i}\cdot x_{ij}$$
+
+Remember that $a(\phi)V(\mu_i)=\mathbb{V}[y_i]$ and that $b'(\theta)=\mu$. So we could replace the terms, but it's not essential.
+
+The only thing left to do is to equate this to 0 and solve it! Right? Well … no.
+
+The problem is that this usually doesn't have a close form solution. We will have to use numerical solutions which we will see in the next section.
+
+### :apple: 4.1.2 Canonical link function
+
+If we choose the canonical link function, that is, if we set $\theta=\eta=\beta^Tx$, how will our calculations change?
+
+If $\theta=\eta$, then the middle terms here cancel out:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\frac{\partial\theta_i}{\partial\mu_i}\frac{\partial\mu_i}{\partial\eta_i}\frac{\partial\eta_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\textcolor{orange}{\frac{\partial\theta_i}{\partial\mu_i}\frac{\partial\mu_i}{\partial\theta_i}}\frac{\partial\eta_i}{\partial\beta_j}=\frac{\partial\ell_i}{\partial\theta_i}\frac{\partial\eta_i}{\partial\beta_j}$$
