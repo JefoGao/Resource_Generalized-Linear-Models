@@ -56,3 +56,7 @@ For $\textcolor{lime}{\frac{\partial\mu_i}{\partial\eta_i}}$.
 - Once we have a link function, this is equal to derivative of the inverse function.
   - I.e., $\mu=g^{-1}(\eta), \frac{\partial\mu}{\partial\eta}=\frac{\partial g^{-1}(\eta)}{\partial\eta}$
   - E.g., suppose we have the logit link function, $g(\mu)=\log(\frac{\mu}{1-\mu}=\eta)$; The inverse of the logit is the sigmoid, $g^{-1}(\eta)=\frac{e^\eta}{1+e^eta}=\sigma(\eta)=\mu$; The derivative of $\mu$ w.r.t. $\eta$ thus becomes $\frac{\partial\sigma(\eta)}{\partial\eta}$, which turns out to be $\sigma(\eta)(1-\sigma(\eta))$
+
+Putting everything together, we get:
+
+$$\frac{\partial\ell_i}{\partial\beta_j}=\frac{y_i-b'(\theta)}{a(\phi)}\cdot\frac{1}{V(\mu_i)}\cdot\frac{\partial\mu_i}{\partial\eta_i}\cdot x_{ij}$$
