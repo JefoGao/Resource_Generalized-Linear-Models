@@ -232,7 +232,7 @@ The steps for IRLS are as follows:
 
 ### :apple: 4.4.2 Intuition
 
-The intuition behind IRLS is that it is a weighted least squares algorithm, where the weights are chosen to reflect the variance of each observation. In particular, observations with smaller variance are given more weight in the computation of the updated estimates of the coefficients. This means that IRLS gives more weight to observations that are more informative, and less weight to observations that are noisy or less informative.
+The intuition behind IRLS is that it is a weighted least squares algorithm, where the weights are chosen to reflect the variance of each observation. In particular, observations with smaller variance (i.e., less noise) are given more weight in the computation of the updated estimates of the coefficients. This means that IRLS gives more weight to observations that are more informative, and less weight to observations that are noisy or less informative.
 
 The working response $z$ is used to adjust for the discrepancy between the observed response $y$ and the fitted values $\hat{y}$, and to weight the observations according to their variance. The weights are used to down-weight observations with high variance, which can cause the estimates of the coefficients to be biased.
 
